@@ -6,15 +6,18 @@ import './Intro.css';
 
 const Intro = forwardRef<HTMLElement>((props, ref) => {
     const [formData, setFormData] = useState({
+        pooja: "",
         email: "",
-        session: "",
+        name: "",
+        phone: "",
+        date: "",
     });
     
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement| HTMLSelectElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
     
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubscribe = async (e: React.FormEvent) => {
         e.preventDefault();
         console.log("Submitted data:", formData);
         // send data to backend / API here
@@ -34,16 +37,23 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
         e.preventDefault();
         console.log("Submitted data:", formData);
         // send data to backend / API here
-        const saveRes = await fetch("http://localhost:5000/api/request", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email: formData.email }), // send only email
-        });
+        try {
+            const res = await fetch("http://localhost:5000/api/request", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData), // send exactly name, email, message
+            });
 
-        if (!saveRes.ok) throw new Error("Failed to subscribe");
+            if (!res.ok) throw new Error("Failed to send request");
 
-        const result = await saveRes.json();
-        console.log("Subscribed:", result);
+            const result = await res.json();
+            console.log("Request sent:", result);
+            alert("Your request has been sent successfully!");
+            setFormData({ name: "", email: "", pooja: "", phone: "", date: "" }); // reset form
+        } catch (err) {
+            console.error("Error sending request:", err);
+            alert("Something went wrong. Please try again.");
+        }
     };
 
   return (
@@ -60,7 +70,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                         <span>Follow Us!</span>
                     </a>
                 </div>
-                <form onSubmit={handleSubmit} className="subscribe-form">
+                <form onSubmit={handleSubscribe} className="subscribe-form">
                     <p>Subscribe to our newsletter</p>
                     <div className="form-row">
                         <input
@@ -85,8 +95,8 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                     <p>Select a session to subscribe to</p>
                     <div className="form-row">
                         <select
-                            name="session"
-                            value={formData.session}
+                            name="pooja"
+                            value={formData.pooja}
                             onChange={handleChange}
                             className="textbox"
                             required
@@ -103,7 +113,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                             type="text"
                             name="name"
                             placeholder="Your Full Name"
-                            value={formData.email}
+                            value={formData.name}
                             onChange={handleChange}
                             className="textbox"
                             required
@@ -123,9 +133,18 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                             type="text"
                             name="phone"
                             placeholder="Your Phone Number (optional)"
-                            value={formData.email}
+                            value={formData.phone}
                             onChange={handleChange}
                             className="textbox"
+                        />
+
+                        <input
+                            type="date"
+                            name="date"
+                            value={formData.date}
+                            onChange={handleChange}
+                            required
+                            className='textbox'
                         />
                     </div>
 
