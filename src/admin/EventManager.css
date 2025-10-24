@@ -1,0 +1,69 @@
+.event-manager {
+  padding: 1rem;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.event-form input,
+.event-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.event-form button {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.event-form button:hover {
+  background: orangered;
+}
+
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.event-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff5e1;
+}
+
+.event-item img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  object-fit: cover;
+}
+
+.event-item button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.event-item button:hover {
+  background: darkred;
+}

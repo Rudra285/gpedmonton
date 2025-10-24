@@ -1,0 +1,25 @@
+.resources-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.resource-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+  width: 100%;
+}
+
+.resource-section h2 {
+  margin-bottom: 2rem;
+}
+
+.music-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}

@@ -1,0 +1,44 @@
+.upcoming-events-section {
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 00px; */
+    padding: 4rem 2rem; /* more padding top/bottom and sides */
+    /* text-align: center;  center the text */
+}
+
+.upcoming-events-section h2 {
+    margin-bottom: 5rem;
+
+}
+
+.upcoming-events-section div {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.past-events-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.past-events-posters {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
+
+.past-event-img {
+  width: 200px;   /* fixed width */
+  height: 180px;   /* keep aspect ratio */
+  margin: 1rem;   /* add spacing between images */
+  border-radius: 8px; /* optional: rounded corners */
+  object-fit: contain; /* crop instead of squish if you also set height */
+}

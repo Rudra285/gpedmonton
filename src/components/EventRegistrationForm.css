@@ -1,0 +1,92 @@
+.event-info {
+  display: grid;
+  justify-content: start;
+}
+
+.form-container {
+  /* max-width: 400px; */
+  margin: 50px; /* centers horizontally */
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+}
+
+.form-title {
+  text-align: start;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  /* display: block; */
+  text-align: start;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  background-color: orange;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: orange;
+  background-color: orangered;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 10px 0px;
+}
+
+.checkbox-group input {
+  margin-right: 8px;
+}
+
+.submit-btn {
+  width: 100%;
+  background: orange;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 60px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: orangered;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: -8px;
+}
+
+.square-up-logo {
+  width: 100px;   /* fixed width */
+  height: auto;   /* keep aspect ratio */
+  /* margin: 1rem;   add spacing between images */
+  object-fit: cover; /* crop instead of squish if you also set height */
+}
+
+.donation-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* color: white; since your background is #3498db */
+  border-radius: 40px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}

@@ -1,0 +1,58 @@
+.admin-dashboard {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.dashboard-section {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.tab-header {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tab-header button {
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab-header button.active {
+  background: #ffebcd;
+  border-color: #d49a00;
+  font-weight: 600;
+}
+
+.tab-content {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.logout-btn {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin: 10px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  background: orangered;
+}

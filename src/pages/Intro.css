@@ -1,0 +1,122 @@
+.overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.support {
+    height: 100vh;
+    display: flex;
+}
+
+.support > div {
+    display: flex;
+    width: 100%;
+    max-width: 1200px; /* optional max width */
+    gap: 2rem; /* space between items */
+    flex-wrap: wrap; /* allow wrapping on smaller screens */
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: #fff;
+}
+
+.disclaimer {
+    background-color: #390303ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 4rem 2rem; /* more padding top/bottom and sides */
+    text-align: center;  /* center the text */
+}
+
+.disclaimer h2 {
+    margin-bottom: 2rem;
+}
+
+.disclaimer p {
+    margin-bottom: 2rem;
+}
+
+.disclaimer ol {
+    text-align: left; /* align list items to the left */
+    margin-top: 1rem;
+    padding-left: 1.5rem; /* indent list items */
+    display: inline-block; /* keeps list centered */
+    max-width: 700px; /* optional max width */
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;  /* space between icon and text */
+  font-weight: 500;
+  padding: 0.3rem;
+  color: white; /* since your background is #3498db */
+  /* box-shadow: 0 6px 16px rgba(0,0,0,0.15); */
+  border-radius: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-link:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    transform: translateY(-4px);
+}
+
+.social-link a {
+  color: white;
+}
+
+.social-link a:hover {
+  color: white;
+}
+
+.social-media input {
+   border: 1px solid white;
+   width: 250px;
+   padding: 0.75rem;
+   box-sizing: border-box;
+}
+
+.subscribe-button {
+  /* display: inline-block; */
+  display: flex;
+  padding: 0.5rem 1rem; /*space inside button*/
+  color: white;
+  width: auto;
+  background-color: orange;
+  text-decoration: none;
+  border-radius: 20px; /* curved edges */
+  transition: background-color 0.2s, transform 0.2s;
+  align-items: flex-start;
+}
+
+.subscribe-button:hover {
+  background-color: orangered;
+  transform: scale(1.05); /* subtle hover effect */
+}
+
+.square-logo {
+  width: 100px;   /* fixed width */
+  height: auto;   /* keep aspect ratio */
+  margin: 1rem;   /* add spacing between images */
+  object-fit: cover; /* crop instead of squish if you also set height */
+}
+
+.donate-link {
+  display: flex;
+  align-items: center;
+  color: white; /* since your background is #3498db */
+  border-radius: 40px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.donate-link:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    transform: translateY(-4px);
+}

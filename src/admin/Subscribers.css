@@ -1,0 +1,55 @@
+.subscription-manager {
+  padding: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: orange;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.event-section {
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #fafafa;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.event-header {
+  color: #ff6600;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  border-bottom: 2px solid #ff6600;
+  padding-bottom: 0.25rem;
+}
+
+.export-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.export-button:hover {
+  background-color: darkorange;
+  transform: scale(1.05);
+}

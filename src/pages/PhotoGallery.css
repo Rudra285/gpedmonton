@@ -1,0 +1,163 @@
+.photos-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+/* === CURRENT PHOTOS === */
+.current-photos-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 4rem 0;
+}
+
+/* 🟠 Place each year side by side as columns */
+.photo-years-grid {
+  display: flex;
+  flex-direction: row; /* <-- columns, not rows */
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 5rem;
+  width: 100%;
+  max-width: 1200px; /* keeps it centered and tidy */
+}
+
+/* Each year’s column */
+.photo-years-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%; /* half width for two columns */
+  min-width: 300px;
+}
+
+/* Photos stacked within each year’s column */
+.current-photos-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Photo card size */
+.photo-card {
+  width: 220px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+  transform: scale(1.03);
+}
+
+.photo-card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  background: #f5f5f5;
+}
+
+/* Responsive: stack years vertically on smaller screens */
+@media (max-width: 900px) {
+  .photo-years-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-years-grid > div {
+    width: 90%;
+  }
+}
+
+/* === PAST PHOTOS === */
+.past-photos-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  list-style: none;
+  margin-top: 2rem;
+  padding: 0;
+}
+
+.past-photo-link {
+  text-decoration: none;
+  color: orange;
+  font-weight: 500;
+  transition: color 0.2s;
+  position: relative;
+  padding: 4px 0;
+}
+
+.past-photo-link:hover {
+  color: orangered;
+}
+
+/* underline element */
+.past-photo-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(to right, transparent, orangered, transparent);
+  transition: width 0.3s, left 0.4s;
+  transform: translateX(-50%);
+}
+
+.past-photo-link:hover::after,
+.past-photo-link.active::after {
+  width: 100%;
+  left: 50%;
+}
+
+/* overline element */
+.past-photo-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(to right, transparent, orangered, transparent);
+  transition: width 0.3s, left 0.4s;
+  transform: translateX(-50%);
+}
+
+.past-photo-link:hover::before,
+.past-photo-link.active::before {
+  width: 100%;
+  left: 50%;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .current-photos-section {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .photo-card {
+    width: 180px;
+  }
+
+  .photo-card-img {
+    height: 140px;
+  }
+
+  .past-photos-section ul {
+    width: 100%;
+  }
+}
