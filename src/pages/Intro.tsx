@@ -32,6 +32,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
 
         const result = await saveRes.json();
         console.log("Subscribed:", result);
+        alert("Subscribed!");
     };
 
     const handleRequest = async (e: React.FormEvent) => {
