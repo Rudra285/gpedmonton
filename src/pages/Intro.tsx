@@ -7,7 +7,8 @@ import './Intro.css';
 const Intro = forwardRef<HTMLElement>((props, ref) => {
     const [formData, setFormData] = useState({
         pooja: "",
-        email: "",
+        subEmail: "",
+        reqEmail: "",
         name: "",
         phone: "",
         date: "",
@@ -24,7 +25,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
         const saveRes = await fetch("http://localhost:5000/api/subscribe", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email: formData.email }), // send only email
+            body: JSON.stringify({ email: formData.subEmail }), // send only email
         });
 
         if (!saveRes.ok) throw new Error("Failed to subscribe");
@@ -49,7 +50,15 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
             const result = await res.json();
             console.log("Request sent:", result);
             alert("Your request has been sent successfully!");
-            setFormData({ name: "", email: "", pooja: "", phone: "", date: "" }); // reset form
+            setFormData((prev) => ({
+                ...prev,
+                name: "",
+                reqEmail: "",
+                pooja: "",
+                phone: "",
+                date: "",
+            })); // reset form
+
         } catch (err) {
             console.error("Error sending request:", err);
             alert("Something went wrong. Please try again.");
@@ -75,9 +84,9 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                     <div className="form-row">
                         <input
                             type="text"
-                            name="email"
+                            name="subEmail"
                             placeholder="Your Email"
-                            value={formData.email}
+                            value={formData.subEmail}
                             onChange={handleChange}
                             className="textbox"
                             required
@@ -121,9 +130,9 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
 
                         <input
                             type="text"
-                            name="email"
+                            name="reqEmail"
                             placeholder="Your Email"
-                            value={formData.email}
+                            value={formData.reqEmail}
                             onChange={handleChange}
                             className="textbox"
                             required
