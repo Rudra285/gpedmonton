@@ -83,6 +83,22 @@
    box-sizing: border-box;
 }
 
+.pooja input {
+   border: 1px solid white;
+   width: 250px;
+   padding: 0.75rem;
+   box-sizing: border-box;
+   display: flex;
+}
+
+.pooja select {
+   border: 1px solid white;
+   width: 250px;
+   padding: 0.75rem;
+   box-sizing: border-box;
+   display: flex;
+}
+
 .subscribe-button {
   /* display: inline-block; */
   display: flex;
@@ -99,6 +115,26 @@
 .subscribe-button:hover {
   background-color: orangered;
   transform: scale(1.05); /* subtle hover effect */
+  border: none;
+}
+
+.request-button {
+  /* display: inline-block; */
+  display: flex;
+  padding: 0.5rem 1rem; /*space inside button*/
+  color: white;
+  width: auto;
+  background-color: orange;
+  text-decoration: none;
+  border-radius: 20px; /* curved edges */
+  transition: background-color 0.2s, transform 0.2s;
+  align-items: flex-start;
+}
+
+.request-button:hover {
+  background-color: orangered;
+  transform: scale(1.05); /* subtle hover effect */
+  border: none;
 }
 
 .square-logo {

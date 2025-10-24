@@ -1,14 +1,16 @@
 import React, { forwardRef, useState } from 'react';
 import { FaFacebookF } from "react-icons/fa";
 import squareLogo from '../images/square-logo.png'
+import Calendar from "../components/Calendar";
 import './Intro.css';
 
 const Intro = forwardRef<HTMLElement>((props, ref) => {
     const [formData, setFormData] = useState({
         email: "",
+        session: "",
     });
     
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement| HTMLSelectElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
     
@@ -28,13 +30,26 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
         console.log("Subscribed:", result);
     };
 
+    const handleRequest = async (e: React.FormEvent) => {
+        e.preventDefault();
+        console.log("Submitted data:", formData);
+        // send data to backend / API here
+        const saveRes = await fetch("http://localhost:5000/api/request", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email: formData.email }), // send only email
+        });
+
+        if (!saveRes.ok) throw new Error("Failed to subscribe");
+
+        const result = await saveRes.json();
+        console.log("Subscribed:", result);
+    };
+
   return (
     <main>
         <section ref={ref} className='overview'>
-            <h1>What is this site?</h1>
-            <p>
-                Gayatri Pariwar 
-            </p>
+            <Calendar />
         </section>
         <section id='support-us' className='support'>
             <div style={{ backgroundColor: '#1877F2' }} className='social-media'>
@@ -55,10 +70,67 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                             value={formData.email}
                             onChange={handleChange}
                             className="textbox"
+                            required
                         />
                     </div>
                     <div className="subscribe-button-wrapper">
                         <button type="submit" className="subscribe-button">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+
+            <div style={{ backgroundColor: '#f27a18ff' }} className='pooja'>
+                <h2>Want to book a session?</h2>
+                <form onSubmit={handleRequest} className="pooja-form">
+                    <p>Select a session to subscribe to</p>
+                    <div className="form-row">
+                        <select
+                            name="session"
+                            value={formData.session}
+                            onChange={handleChange}
+                            className="textbox"
+                            required
+                        >
+                            <option value="">-- Choose a session --</option>
+                            <option value="Morning Meditation">Morning Meditation</option>
+                            <option value="Evening Satsang">Evening Satsang</option>
+                            <option value="Kids Workshop">Kids Workshop</option>
+                            <option value="Bhajan Class">Bhajan Class</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Your Full Name"
+                            value={formData.email}
+                            onChange={handleChange}
+                            className="textbox"
+                            required
+                        />
+
+                        <input
+                            type="text"
+                            name="email"
+                            placeholder="Your Email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            className="textbox"
+                            required
+                        />
+
+                        <input
+                            type="text"
+                            name="phone"
+                            placeholder="Your Phone Number (optional)"
+                            value={formData.email}
+                            onChange={handleChange}
+                            className="textbox"
+                        />
+                    </div>
+
+                    <div className="request-button-wrapper">
+                        <button type="submit" className="request-button">Request</button>
                     </div>
                 </form>
             </div>
