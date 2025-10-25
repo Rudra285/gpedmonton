@@ -79,6 +79,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                         <FaFacebookF />
                         <span>Follow Us!</span>
                     </a>
+                    <img src="../images/whatsapp_qr" alt="What's App Join" />
                 </div>
                 <form onSubmit={handleSubscribe} className="subscribe-form">
                     <p>Subscribe to our newsletter</p>
