@@ -1,6 +1,7 @@
 import React, { forwardRef, useState } from 'react';
 import { FaFacebookF } from "react-icons/fa";
 import squareLogo from '../images/square-logo.png'
+import qrWhatsApp from '../images/whatsapp_qr.jpeg';
 import Calendar from "../components/Calendar";
 import './Intro.css';
 
@@ -79,8 +80,8 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                         <FaFacebookF />
                         <span>Follow Us!</span>
                     </a>
-                    <img src="../images/whatsapp_qr" alt="What's App Join" />
                 </div>
+                <img src={qrWhatsApp} alt="What's App Join" className='qrWhatsApp'/>
                 <form onSubmit={handleSubscribe} className="subscribe-form">
                     <p>Subscribe to our newsletter</p>
                     <div className="form-row">

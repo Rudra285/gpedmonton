@@ -156,3 +156,10 @@
     box-shadow: 0 6px 16px rgba(0,0,0,0.15);
     transform: translateY(-4px);
 }
+
+.qrWhatsApp {
+  width: 100px;   /* fixed width */
+  height: auto;   /* keep aspect ratio */
+  margin: 1rem;   /* add spacing between images */
+  object-fit: cover; /* crop instead of squish if you also set height */
+}
