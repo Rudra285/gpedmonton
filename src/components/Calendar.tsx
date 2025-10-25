@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
+import { FaArrowRight } from "react-icons/fa";
 import "./Calendar.css";
 
 interface EventData {
@@ -27,6 +28,8 @@ const Calendar: React.FC = () => {
           plugins={[dayGridPlugin]}
           initialView="dayGridMonth"
           height="auto"
+          contentHeight="auto"
+          aspectRatio={1.6}        // ✅ ensures full month width
           events={events.map((e) => ({
             title: e.name,
             date: new Date(e.timestamp).toISOString(),
@@ -44,6 +47,7 @@ const Calendar: React.FC = () => {
               <li key={e._id}>
                 <a href={`/events/register/${encodeURIComponent(e.name)}`}>
                   {e.name} — {new Date(e.timestamp).toLocaleDateString()}
+                  <FaArrowRight className="arrow-icon" />
                 </a>
               </li>
             ))}

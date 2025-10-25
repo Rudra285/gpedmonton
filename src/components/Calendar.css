@@ -4,23 +4,35 @@
   align-items: flex-start;
   gap: 2rem;
   flex-wrap: wrap;
-  padding: 2rem;
+  padding: 3rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.calendar-side {
-  width: 250px;
-  background: #fff8f0;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.calendar-container {
+  flex: 1 1 60%;       /* ✅ give flexible width */
+  min-width: 500px;    /* was 600px — reduced to fit weekends */
+  max-width: 900px;    /* cap width so it doesn’t stretch too far */
+  background: linear-gradient(135deg, #FFFDE7, #FFF3E0);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;    /* ✅ ensures weekends aren’t cut off visually */
 }
 
-.calendar-side h3 {
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  color: #ff7b00;
+@media (max-width: 768px) {
+  .calendar-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .calendar-container {
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
 
+/* Sidebar (events, highlights, etc.) */
 .calendar-side ul {
   list-style: none;
   padding: 0;
@@ -28,19 +40,129 @@
 }
 
 .calendar-side li {
-  margin: 0.4rem 0;
+  margin: 0.8rem 0;
+  text-align: center;
 }
 
 .calendar-side a {
-  color: #ff7b00;
+  display: inline-block;
+  width: 100%;
+  background: linear-gradient(135deg, rgb(255, 44, 44), rgb(250, 174, 60));
+  color: #FFF;
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  font-weight: 600;
   text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
 }
 
 .calendar-side a:hover {
-  text-decoration: underline;
+  transform: scale(1.05);
+  background: linear-gradient(135deg, rgb(252, 159, 5), rgb(255, 123, 0));
+  box-shadow: 0 6px 16px rgba(255, 152, 0, 0.4);
+  color: #FFF;
 }
 
-.calendar-container {
-  flex: 1;
-  min-width: 600px;
+/* Example styling for individual days */
+.calendar-day {
+  background: #FFF8E1;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calendar-day:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
+}
+
+.fc { width: 100% !important; }
+.fc-scroller { overflow: visible !important; } /* prevents right edge clipping */
+
+.arrow-icon {
+  margin-left: 0.5rem;
+  /* opacity: 0; */
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+/* Day header row (Mon, Tue, ...) */
+.fc-col-header-cell-cushion {
+  color: #C62828 !important;        /* deep temple red */
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Day numbers (1, 2, 3, ...) */
+.fc-daygrid-day-number {
+  color: #FFB300 !important;        /* saffron-gold tone */
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on date numbers */
+.fc-daygrid-day:hover .fc-daygrid-day-number {
+  color: #E65100 !important;        /* deep orange on hover */
+}
+
+/* Today cell highlight */
+.fc-day-today {
+  background: linear-gradient(135deg, #FFF8E1, #FFE082) !important;
+  border: 2px solid #FF9800 !important;
+}
+
+.fc-day-today .fc-daygrid-day-number {
+  color: red !important;
+  font-weight: 700;
+}
+.fc .fc-event {
+  /* background: linear-gradient(135deg, #FF9800, #FFB300) !important; saffron gradient */
+  border: none !important;
+  color: #ff0000 !important;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 8px;
+  /* transition: transform 0.2s ease, box-shadow 0.2s ease; */
+}
+
+/* Text inside event */
+.fc-event-title {
+  color: red !important;
+}
+
+/* All toolbar buttons */
+.fc .fc-button {
+  background: linear-gradient(135deg, #FF9800, #FFB300);
+  border: none;
+  border-radius: 25px;
+  color: #FFF8E1;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.5rem 1.2rem;
+  margin: 0 0.25rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
+}
+
+.fc .fc-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #FFB300, #F4511E);
+  box-shadow: 0 6px 16px rgba(255, 179, 0, 0.4);
+}
+
+/* Active button (if using multiple views) */
+.fc .fc-button-active {
+  background: linear-gradient(135deg, #C62828, #F4511E);
+  color: #FFF8E1;
+}
+
+/* Disable default gray focus rings */
+.fc .fc-button:focus {
+  box-shadow: 0 0 0 2px rgba(255, 179, 0, 0.5);
+  outline: none;
 }

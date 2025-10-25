@@ -73,7 +73,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
             <Calendar />
         </section>
         <section id='support-us' className='support'>
-            <div style={{ backgroundColor: '#1877F2' }} className='social-media'>
+            <div className='social-media'>
                 <h2>Connect with us</h2>
                 <div className="social-link">
                     <a href="https://www.facebook.com/profile.php?id=100012147423755" target="_blank" rel="noopener noreferrer">
@@ -81,6 +81,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                         <span>Follow Us!</span>
                     </a>
                 </div>
+                <h3>Join Us</h3>
                 <img src={qrWhatsApp} alt="What's App Join" className='qrWhatsApp'/>
                 <form onSubmit={handleSubscribe} className="subscribe-form">
                     <p>Subscribe to our newsletter</p>
@@ -101,7 +102,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                 </form>
             </div>
 
-            <div style={{ backgroundColor: '#f27a18ff' }} className='pooja'>
+            <div className='pooja'>
                 <h2>Want to book a session?</h2>
                 <form onSubmit={handleRequest} className="pooja-form">
                     <p>Select a session to subscribe to</p>
@@ -167,7 +168,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
             </div>
 
             {/* Flex Item 2 */}
-            <div style={{ backgroundColor: 'green' }} className='donation'>
+            <div className='donation'>
                 <h2>Donate</h2>
                 <p>Support our activities by donating securely online.</p>
                 <h3>Click below to donate</h3>
