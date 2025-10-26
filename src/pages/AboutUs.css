@@ -1,0 +1,150 @@
+/* ========== GLOBAL LAYOUT ========== */
+.about-us {
+  color: #3e2723;
+  overflow-x: hidden;
+}
+
+/* Shared base styling for all sections */
+.about-us section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 2rem;
+  width: 100%;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* alternate background tones for visual rhythm */
+.pariwar {
+  background: linear-gradient(180deg, #fff8e1, #ffecb3);
+}
+
+.mission {
+  background: linear-gradient(180deg, #fff3e0, #ffe0b2);
+}
+
+.awgp {
+  background: linear-gradient(180deg, #fff8e1, #ffe0b2);
+}
+
+.pragyakunj {
+  background: linear-gradient(180deg, #fff3e0, #ffcc80);
+}
+
+/* Section hover subtle lift (desktop only) */
+@media (hover: hover) {
+  .about-us section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(255, 152, 0, 0.15);
+  }
+}
+
+/* ========== TYPOGRAPHY ========== */
+.about-us h1 {
+  color: #ff8c00;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.about-us h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 0.6rem auto 1.5rem;
+  background: linear-gradient(90deg, orange, orangered);
+  border-radius: 3px;
+}
+
+.about-us p {
+  max-width: 800px;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #4e342e;
+  margin-bottom: 1rem;
+}
+
+/* ========== LISTS ========== */
+.about-us ul {
+  max-width: 700px;
+  text-align: left;
+  margin: 1.5rem auto;
+  padding-left: 1.2rem;
+}
+
+.about-us li {
+  margin: 0.6rem 0;
+  line-height: 1.5;
+  font-size: 1.05rem;
+  position: relative;
+  padding-left: 1.5rem;
+  color: #5d4037;
+}
+
+ul {
+    list-style: none;
+}
+
+/* small decorative icon bullet (orange dot) */
+.about-us li::before {
+  content: "☀";
+  position: absolute;
+  left: 0;
+  color: orange;
+  font-size: 0.9rem;
+}
+
+/* Highlight key words */
+.about-us strong {
+  color: #d84315;
+}
+
+/* ========== ANIMATIONS ========== */
+.about-us section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.about-us section:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.about-us section:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.about-us section:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.about-us section:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .about-us h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-us p,
+  .about-us li {
+    font-size: 1rem;
+  }
+
+  .about-us section {
+    padding: 3rem 1.5rem;
+  }
+}

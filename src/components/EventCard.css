@@ -39,7 +39,7 @@
 }
 
 .event-card p {
-  color: red;
+  /* color: red; */
   font-size: 0.95rem;
   margin: 0 1rem 1rem;
   text-align: center;

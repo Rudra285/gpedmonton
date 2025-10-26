@@ -3,6 +3,9 @@ import { FaFacebookF } from "react-icons/fa";
 import squareLogo from '../images/square-logo.png'
 import qrWhatsApp from '../images/whatsapp_qr.jpeg';
 import Calendar from "../components/Calendar";
+import connect from '../images/slide_33.png';
+import pooja from '../images/slide_35.png';
+import donate from '../images/slide_2.png';
 import './Intro.css';
 
 const Intro = forwardRef<HTMLElement>((props, ref) => {
@@ -73,8 +76,10 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
             <Calendar />
         </section>
         <section id='support-us' className='support'>
-            <div className='social-media'>
-                <h2>Connect with us</h2>
+            <div className='social-media' style={{ backgroundImage: `url(${connect})` }}>
+                <div className='support-h2'>
+                    <h2>Connect with us</h2>
+                </div>
                 <div className="social-link">
                     <a href="https://www.facebook.com/profile.php?id=100012147423755" target="_blank" rel="noopener noreferrer">
                         <FaFacebookF />
@@ -102,8 +107,10 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                 </form>
             </div>
 
-            <div className='pooja'>
-                <h2>Want to book a session?</h2>
+            <div className='pooja' style={{ backgroundImage: `url(${pooja})` }}>
+                <div className='support-h2'>
+                    <h2>Want to book a session?</h2>
+                </div>
                 <form onSubmit={handleRequest} className="pooja-form">
                     <p>Select a pooja session to request</p>
                     <div className="form-row">
@@ -114,11 +121,12 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                             className="textbox"
                             required
                         >
-                            <option value="">-- Choose a session --</option>
-                            <option value="Morning Meditation">Morning Meditation</option>
-                            <option value="Evening Satsang">Evening Satsang</option>
-                            <option value="Kids Workshop">Kids Workshop</option>
-                            <option value="Bhajan Class">Bhajan Class</option>
+                            <option value="">-- Choose a service --</option>
+                            <option value="Havan Yagya">Havan Yagya</option>
+                            <option value="Deep Yagya">Deep Yagya</option>
+                            <option value="Satyanarayan Katha">Satyanarayan Katha</option>
+                            <option value="Vaastu Pujan">Griha Pravesh</option>
+                            <option value="Vivah (Hindu-Wedding) Sanskaar">Vivah (Hindu-Wedding) Sanskaar</option>
                             <option value="Other">Other</option>
                         </select>
 
@@ -164,12 +172,19 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                     <div className="request-button-wrapper">
                         <button type="submit" className="request-button">Request</button>
                     </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
                 </form>
             </div>
 
             {/* Flex Item 2 */}
-            <div className='donation'>
-                <h2>Donate</h2>
+            <div className='donation' style={{ backgroundImage: `url(${donate})` }}>
+                <div className='support-h2'>
+                    <h2>Donate</h2>
+                </div>
                 <p>Support our activities by donating securely online.</p>
                 <h3>Click below to donate</h3>
                 <div className="donate-link">
@@ -177,13 +192,15 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                         <img src={squareLogo} className='square-logo' />
                     </a>
                 </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
             </div>
-{/* 
-        
-            <div style={{ backgroundColor: '#2ecc71' }}>
-                <h2>Pragya Kunj Support</h2>
-                <p>Help maintain and grow our spiritual center.</p>
-            </div> */}
         </section>
         <section className='disclaimer'>
             <h3>Disclaimer</h3>

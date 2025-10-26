@@ -40,7 +40,7 @@ const Calendar: React.FC = () => {
       </div>
       {/* ✅ Event List Sidebar */}
       <div className="calendar-side">
-        <h3>Upcoming Events</h3>
+        <h3>Registration for upcoming Events</h3>
         {events.length > 0 ? (
           <ul>
             {events.map((e) => (

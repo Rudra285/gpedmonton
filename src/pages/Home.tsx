@@ -33,8 +33,8 @@ const Home = forwardRef<HTMLElement>((props, ref) => {
               </div>
             </li> */}
             <li><Link to="/photos" className="button-link">Photo Gallery</Link></li>
-            <li><Link to="/contact" className="button-link">Pragyakunj</Link></li>
-            <li><Link to="/contact" className="button-link">Pooja Prep</Link></li>
+            {/* <li><Link to="/contact" className="button-link">Pragyakunj</Link></li> */}
+            {/* <li><Link to="/contact" className="button-link">Pooja Prep</Link></li> */}
             <li><a href="https://www.gptoronto.org/about-3-1" target="_blank" className="button-link">
               Shantikunj & DSVV
             </a></li>

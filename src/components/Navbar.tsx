@@ -45,8 +45,8 @@ const Navbar: React.FC<NavbarProps> = ({ className, /*onDonateClick*/ }) => {
             <li><span className="nav-link">More <FaChevronDown className="dropdown-arrow" /></span></li> {/* Page about books, recordings */}
             <ul className="dropdown-menu">
               <li><Link to="/photos">Photo Gallery</Link></li>
-              <li><Link to="/resources">Pragyakunj</Link></li>
-              <li><Link to="/resources">Pooja Prep</Link></li>
+              {/* <li><Link to="/resources">Pragyakunj</Link></li> */}
+              {/* <li><Link to="/resources">Pooja Prep</Link></li> */}
               <li><a href="https://www.gptoronto.org/about-3-1" target="_blank" rel="noopener noreferrer">Shantikunj & DSVV</a></li>
               <li><a href="https://www.awgp.org/en/contact_us/global_contacts" target="_blank" rel="noopener noreferrer">AWGP Contacts</a></li>
             </ul>

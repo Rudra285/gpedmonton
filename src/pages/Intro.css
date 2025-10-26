@@ -83,6 +83,19 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.support h2 {
+    font-size: 2rem;
+}
+
+.support h3 {
+    font-size: 1.3rem;
+}
+
+.support p,
+.support span {
+    font-size: 1.1rem;
+}
+
 .social-link:hover {
     box-shadow: 0 6px 16px rgba(0,0,0,0.15);
     transform: translateY(-4px);
@@ -102,9 +115,9 @@
 }
 
 .social-media input {
-  border: 1px solid #f8cec6;
+  border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0.15);
-  color: #FFF;
+  color: #fff;
   border-radius: 8px;
   width: 250px;
   outline: none;
@@ -112,7 +125,7 @@
 }
 
 .social-media input::placeholder {
-  color: #f8cec6;
+  color: #fff;
 }
 
 .social-media input:focus {
@@ -126,12 +139,12 @@
 
 .pooja input,
 .pooja select {
-  border: 1px solid #f8edc6;
+  border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0.15); /* translucent glow */
   padding: 0.75rem;
   margin: 0.5rem 0;
   width: 250px;
-  color: #f8edc6;
+  color: #fff;
   border-radius: 8px;
   outline: none;
   display: flex;
@@ -139,7 +152,7 @@
 }
 
 .pooja input::placeholder {
-  color: #f8edc6;
+  color: #fff;
 }
 
 .pooja select option {
@@ -154,20 +167,20 @@
 }
 
 .subscribe-button {
-  background: linear-gradient(135deg, rgb(255, 44, 44), rgb(250, 174, 60));
+  background: linear-gradient(135deg, rgb(250, 193, 60), rgb(255, 125, 44));
   /* color: #FFF8E1; */
   border: none;
   border-radius: 25px;
-  padding: 0.8rem 1.5rem;
-  margin-top: 0.3rem;
+  padding: 0.6rem 1.5rem;
   font-weight: 600;
+  margin-top: 0.3rem;
   /* box-shadow: 0 4px 10px rgba(198, 40, 40, 0.4); */
   transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 
 .subscribe-button:hover {
   transform: scale(1.05);
-  background: linear-gradient(135deg, rgb(255, 42, 0), rgb(252, 159, 5));
+  background: linear-gradient(135deg, rgb(252, 178, 5), rgb(255, 123, 0));
 }
 
 .request-button {
@@ -217,4 +230,53 @@
   height: auto;   /* keep aspect ratio */
   margin: 1rem;   /* add spacing between images */
   object-fit: cover; /* crop instead of squish if you also set height */
+}
+
+/* General background settings for all three sections */
+.social-media,
+.pooja,
+.donation {
+  background-size: cover;           /* scales image to cover entire area */
+  background-position: center;       /* centers the image */
+}
+
+.support-h2 {
+  padding: 0 1rem;
+  border-radius: 80px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0.4) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Orange fade for Connect */
+.social-media .support-h2 {
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 140, 0, 0.9) 0%,
+    rgba(255, 140, 0, 0.6) 50%,
+    rgba(255, 140, 0, 0) 100%
+  );
+}
+
+/* Bright golden fade for Pooja */
+.pooja .support-h2 {
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 158, 146, 0.9) 0%,
+    rgba(255, 211, 211, 0.6) 50%,
+    rgba(255, 0, 0, 0) 100%
+  );
+}
+
+/* Deep red fade for Donate */
+.donation .support-h2 {
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 50, 0, 0.9) 0%,
+    rgba(255, 50, 0, 0.6) 50%,
+    rgba(255, 50, 0, 0) 100%
+  );
 }
