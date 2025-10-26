@@ -1,14 +1,10 @@
 --Pre Launch--
-- Add a calender to Events
 - Update the page with latest info
 - Figure out Emailing from the site for subscription newsletter and registration recipient emails.
 - Create a registartion form template for each event
-- Finish Services Page, Pragyakunj and Pooja Prep Page
+- Make it mobile friendly
 - Final revision of design
 
 --Post Launch--
-- Make it mobile friendly
-- Make a admin account page
-- Have records of event registration shown directly from the admin page
-- Have a UI to customize event, photo, resource addition, and registration form creation
-- Make donation possible directly from site via square API
+- Finish Pragyakunj and Pooja Prep Page
+- Make donation possible directly from site via square API?

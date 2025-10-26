@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import './AboutUs.css';
+import brochure from '../assets/tri-fold_brochure_pragyakunj.pdf'
 
 const AboutUs = forwardRef<HTMLElement>((props, ref) => {
   return (
@@ -10,7 +11,7 @@ const AboutUs = forwardRef<HTMLElement>((props, ref) => {
                 Gayatri Pariwar is a living model of a futuristic society, being guided by principles of human unity and equality. It's a modern adoption of the age old wisdom of Vedic Rishis, who practiced and propagated the philosophy of Vasudhaiva Kutumbakam (Entire world is a family). Founded by saint, reformer, writer, philosopher, spiritual guide and visionary Yug Rishi Pandit Shriram Sharma Acharya, this mission has emerged as a mass movement for Transformation of Era. 
             </p>
         </section>
-        <section ref={ref} className='mission'>
+        <section className='mission'>
             <h1>Gayatri Pariwar - Mission and Vision</h1>
             <p>
                 Gayatri Pariwar, Edmonton is inspired by All World Gayatri Pariwar (AWGP), which is a world-wide family of people who follow the principles of Gayatri, the symbol of righteous knowledge, pure intelligence & selfless service.  <br/>
@@ -27,7 +28,7 @@ AWGP is a large organization devoted to thought transformation movement, dissemi
 				</li>
 			</ul>
         </section>
-        <section ref={ref} className='awgp'>
+        <section className='awgp'>
             <h1>AWGP Highlights</h1>
             <ul>
                 <li>More than 4000 centers all over India and Abroad</li>
@@ -46,8 +47,9 @@ AWGP is a large organization devoted to thought transformation movement, dissemi
                 <li>Any other Hindu rituals on demand</li>
             </ul>
         </section>
-        <section ref={ref} className='pragyakunj'>
+        <section className='pragyakunj'>
             <h1>Pragyakunj</h1>
+            <a href={brochure} target="_blank" rel="noopener noreferrer">Download our Brochure</a>
         </section>
     </main>
   );

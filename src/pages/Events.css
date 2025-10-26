@@ -3,6 +3,7 @@
   color: #5D4037;
   text-align: center;
   padding: 4rem 2rem;
+  min-height: 50vh;
 }
 
 .upcoming-events-section h1 {
@@ -27,6 +28,7 @@
   color: #FFF8E1;
   text-align: center;
   padding: 4rem 2rem;
+  min-height: 50vh;
 }
 
 .past-events-section h2 {
