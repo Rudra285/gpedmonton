@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import welcome from '../images/slide_1.png';
+import welcome from '../assets/images/slide_1.png';
 import { Link } from 'react-router-dom';
 import { HashLink } from "react-router-hash-link";
 import './Home.css';

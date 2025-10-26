@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from "react-router-hash-link";
 import { FaChevronDown } from "react-icons/fa";
-import logo from '../images/logo.png';
+import logo from '../assets/images/logo.png';
 import './Navbar.css';
 
 interface NavbarProps {

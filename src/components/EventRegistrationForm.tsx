@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import './EventRegistrationForm.css'
-import squareLogo from '../images/square-logo.png'
+import squareLogo from '../assets/images/square-logo.png'
 import { useParams, useLocation } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { useNavigate } from "react-router-dom";
@@ -122,8 +122,7 @@ const EventRegistrationForm: React.FC = () => {
         </div>
 
         {/* Agreement */}
-        <div className="checkbox-group">
-          <input type="checkbox" {...register("agree", { required: true })}  />
+        <div className="terms-group">
           <span>I agree to the terms & conditions</span>
         </div>
         {errors.agree && <p className="error">You must agree before submitting.</p>}

@@ -1,11 +1,11 @@
 import React, { forwardRef, useState } from 'react';
 import { FaFacebookF } from "react-icons/fa";
-import squareLogo from '../images/square-logo.png'
-import qrWhatsApp from '../images/whatsapp_qr.jpeg';
+import squareLogo from '../assets/images/square-logo.png'
+import qrWhatsApp from '../assets/images/whatsapp_qr.jpeg';
 import Calendar from "../components/Calendar";
-import connect from '../images/slide_33.png';
-import pooja from '../images/slide_35.png';
-import donate from '../images/slide_2.png';
+import connect from '../assets/images/slide_33.png';
+import pooja from '../assets/images/slide_35.png';
+import donate from '../assets/images/slide_2.png';
 import './Intro.css';
 
 const Intro = forwardRef<HTMLElement>((props, ref) => {

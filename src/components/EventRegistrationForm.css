@@ -92,7 +92,7 @@ textarea:focus {
 }
 
 /* ========== CHECKBOX ========== */
-.checkbox-group {
+.terms-group {
   display: flex;
   align-items: center;        /* vertically center the box and text */
   justify-content: flex-start;
@@ -100,14 +100,6 @@ textarea:focus {
   color: #FFF8E1;
   margin: 1rem 0;
   line-height: 1.3;
-}
-
-.checkbox-group input[type="checkbox"] {
-  margin: 0;
-  width: 13px;
-  height: 13px;
-  accent-color: #F4511E;      /* modern browsers support this */
-  cursor: pointer;
 }
 
 /* ========== SUBMIT BUTTON ========== */

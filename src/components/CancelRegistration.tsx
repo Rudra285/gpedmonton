@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import squareLogo from "../images/logo.png";
+import squareLogo from "../assets/images/logo.png";
 
 const CancelRegistration: React.FC = () => {
   const [status, setStatus] = useState("Processing your cancellation...");
