@@ -1,44 +1,66 @@
 .upcoming-events-section {
-    /* background-color: green; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* width: 00px; */
-    padding: 4rem 2rem; /* more padding top/bottom and sides */
-    /* text-align: center;  center the text */
+  background: radial-gradient(circle at center, #FFF, #FFE082, #ff7700 100%);
+  color: #5D4037;
+  text-align: center;
+  padding: 4rem 2rem;
 }
 
-.upcoming-events-section h2 {
-    margin-bottom: 5rem;
-
+.upcoming-events-section h1 {
+  color: #ff9500;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.upcoming-events-section div {
-    margin-bottom: 2rem;
-    display: flex;
-    flex-wrap: wrap;
+/* Align the event cards nicely */
+.upcoming-events-section > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .past-events-section {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  background: linear-gradient(135deg, #FF7043, #FFB300);
+  color: #FFF8E1;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.past-events-section h2 {
+  color: #FFF8E1;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .past-events-posters {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
-
-
 .past-event-img {
-  width: 200px;   /* fixed width */
-  height: 180px;   /* keep aspect ratio */
-  margin: 1rem;   /* add spacing between images */
-  border-radius: 8px; /* optional: rounded corners */
-  object-fit: contain; /* crop instead of squish if you also set height */
+  width: 220px;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.past-event-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(255, 179, 0, 0.4);
+}
+
+.past-events-posters h3 {
+  color: #FFFDE7;
+  margin-top: 0.5rem;
+  font-weight: 600;
 }

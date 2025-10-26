@@ -105,7 +105,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
             <div className='pooja'>
                 <h2>Want to book a session?</h2>
                 <form onSubmit={handleRequest} className="pooja-form">
-                    <p>Select a session to subscribe to</p>
+                    <p>Select a pooja session to request</p>
                     <div className="form-row">
                         <select
                             name="pooja"

@@ -102,10 +102,11 @@
 }
 
 .social-media input {
-  border: 2px solid #f8cec6;
+  border: 1px solid #f8cec6;
   background-color: rgba(255, 255, 255, 0.15);
   color: #FFF;
   border-radius: 8px;
+  width: 250px;
   outline: none;
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
@@ -125,9 +126,10 @@
 
 .pooja input,
 .pooja select {
-  border: 2px solid #f8edc6;
+  border: 1px solid #f8edc6;
   background-color: rgba(255, 255, 255, 0.15); /* translucent glow */
   padding: 0.75rem;
+  margin: 0.5rem 0;
   width: 250px;
   color: #f8edc6;
   border-radius: 8px;
@@ -156,7 +158,8 @@
   /* color: #FFF8E1; */
   border: none;
   border-radius: 25px;
-  padding: 0.6rem 1.5rem;
+  padding: 0.8rem 1.5rem;
+  margin-top: 0.3rem;
   font-weight: 600;
   /* box-shadow: 0 4px 10px rgba(198, 40, 40, 0.4); */
   transition: transform 0.5s ease, box-shadow 0.3s ease;

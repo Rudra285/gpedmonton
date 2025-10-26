@@ -1,69 +1,169 @@
+/* ========== ROOT CONTAINER ========== */
 .event-manager {
-  padding: 1rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #FFF8E1, #FFE082, #FFB300);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(255, 152, 0, 0.25);
+  color: #5D4037;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* ========== TAB TOGGLE ========== */
+.tab-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab-toggle button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid #FFF8E1;
+  color: #C62828;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 0.6rem 1.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-toggle button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+  border: 2px solid #FFF8E1;
+}
+
+.tab-toggle button.active {
+  background: linear-gradient(135deg, #FF7043, #FFB300);
+  color: #FFF8E1;
+  border: 2px solid #FFF8E1;
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.35);
+}
+
+/* ========== FORM STYLING ========== */
 .event-form {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 179, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.event-form:hover {
+  box-shadow: 0 6px 16px rgba(255, 179, 0, 0.35);
 }
 
 .event-form input,
 .event-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
   font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #5D4037;
+  transition: all 0.3s ease;
 }
 
+.event-form input::placeholder,
+.event-form textarea::placeholder {
+  color: #8D6E63;
+}
+
+.event-form input:focus,
+.event-form textarea:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: #FFB300;
+  box-shadow: 0 0 8px rgba(255, 179, 0, 0.4);
+}
+
+/* ========== SUBMIT BUTTON ========== */
 .event-form button {
-  background: orange;
-  color: white;
+  background: linear-gradient(135deg, #C62828, #F4511E);
+  color: #FFF8E1;
   border: none;
   padding: 10px;
-  border-radius: 6px;
+  width: 20%;
+  align-self: center;
+  border-radius: 25px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
 }
 
 .event-form button:hover {
-  background: orangered;
+  background: linear-gradient(135deg, #FFB300, #E65100);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.35);
 }
 
+/* ========== EVENT LIST ========== */
 .event-list {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+  justify-content: center;
 }
 
 .event-item {
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 1rem;
   width: 240px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #fff5e1;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(255, 179, 0, 0.2);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.event-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(255, 179, 0, 0.35);
 }
 
 .event-item img {
   width: 100%;
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
   object-fit: cover;
+  height: 160px;
 }
 
+.event-item h3 {
+  color: #C62828;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ========== DELETE BUTTON ========== */
 .event-item button {
-  background: red;
-  color: white;
+  background: linear-gradient(135deg, #D32F2F, #C62828);
+  color: #FFF8E1;
   border: none;
-  padding: 6px 10px;
-  border-radius: 4px;
+  padding: 6px 12px;
+  border-radius: 20px;
   cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
 }
 
 .event-item button:hover {
-  background: darkred;
+  background: linear-gradient(135deg, #E64A19, #C62828);
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(255, 179, 0, 0.4);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .event-item {
+    width: 100%;
+  }
+
+  .event-form {
+    padding: 1rem;
+  }
 }

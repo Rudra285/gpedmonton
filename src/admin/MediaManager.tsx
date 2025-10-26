@@ -99,7 +99,7 @@ const MediaManager: React.FC = () => {
         ].filter((m) => m._id !== id),
       }));
     } catch (err) {
-      console.error("❌ Error deleting media:", err);
+      console.error("Error deleting media:", err);
       alert("Failed to delete media.");
     }
   };
@@ -111,13 +111,13 @@ const MediaManager: React.FC = () => {
           onClick={() => setTab("music")}
           className={tab === "music" ? "active" : ""}
         >
-          🎵 Music
+          Music
         </button>
         <button
           onClick={() => setTab("video")}
           className={tab === "video" ? "active" : ""}
         >
-          🎬 Videos
+          Videos
         </button>
       </div>
 
@@ -166,7 +166,7 @@ const MediaManager: React.FC = () => {
                   className="delete-btn"
                   onClick={() => handleDelete(m._id, "music")}
                 >
-                  🗑 Delete
+                  Delete
                 </button>
               </div>
             ))
@@ -185,7 +185,7 @@ const MediaManager: React.FC = () => {
                   className="delete-btn"
                   onClick={() => handleDelete(v._id, "video")}
                 >
-                  🗑 Delete
+                  Delete
                 </button>
               </div>
             ))}

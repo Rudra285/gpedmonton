@@ -230,7 +230,7 @@ const EventManager: React.FC = () => {
             <div>
               <h3>{"name" in event ? event.name : event.title}</h3>
               {"date" in event && <p>{event.date}</p>}
-              <button onClick={() => handleDelete(event._id)}>❌ Delete</button>
+              <button onClick={() => handleDelete(event._id)}>Delete</button>
             </div>
           </div>
         ))}

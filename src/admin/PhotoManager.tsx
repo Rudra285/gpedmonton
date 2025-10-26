@@ -77,7 +77,7 @@ const PhotoManager: React.FC = () => {
       setNewPhoto({ title: "", link: "", date: "" });
       setImageFile(null);
     } catch (err) {
-      console.error("❌ Upload failed:", err);
+      console.error("Upload failed:", err);
       alert("Failed to upload photo. Check console for details.");
     }
   };
@@ -101,7 +101,7 @@ const PhotoManager: React.FC = () => {
         [type]: prev[type].filter(p => p._id !== id),
       }));
     } catch (err) {
-      console.error("❌ Error deleting photo:", err);
+      console.error("Error deleting photo:", err);
       alert("Failed to delete photo.");
     }
   };
@@ -110,10 +110,10 @@ const PhotoManager: React.FC = () => {
     <div className="photo-manager">
       <div className="photo-tabs">
         <button onClick={() => setTab("current")} className={tab === "current" ? "active" : ""}>
-          🖼 Current Photos
+          Current Photos
         </button>
         <button onClick={() => setTab("archive")} className={tab === "archive" ? "active" : ""}>
-          📚 Archive Photos
+          Archive Photos
         </button>
       </div>
 
@@ -163,7 +163,7 @@ const PhotoManager: React.FC = () => {
                   className="delete-btn"
                   onClick={() => handleDelete(p._id, "current")}
                 >
-                  🗑 Delete
+                  Delete
                 </button>
               </div>
             ))
@@ -175,7 +175,7 @@ const PhotoManager: React.FC = () => {
                   className="delete-btn"
                   onClick={() => handleDelete(p._id, "archive")}
                 >
-                  🗑 Delete
+                  Delete
                 </button>
               </div>
             ))}

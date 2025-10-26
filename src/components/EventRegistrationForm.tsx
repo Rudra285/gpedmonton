@@ -78,7 +78,7 @@ const EventRegistrationForm: React.FC = () => {
   };
 
   return (
-    <main>
+    <main className="event-registration-page">
       <div className="event-info">
         <h1>{state?.eventName || eventNameFromParams}</h1>
         <h3>{state?.date}</h3>
