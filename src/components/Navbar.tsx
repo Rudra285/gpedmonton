@@ -15,7 +15,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.innerWidth <= 850) {
+      if (window.innerWidth <= 1250) {
         // 📱 Mobile: always visible
         setScrolled(menuOpen);
       } else {
