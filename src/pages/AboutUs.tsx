@@ -18,14 +18,10 @@ const AboutUs = forwardRef<HTMLElement>((props, ref) => {
 AWGP is a large organization devoted to thought transformation movement, dissemination of scientific spirituality, and social and cultural reformation and elevation of the whole world with collective participation of awakened souls.
             </p>
             <ul>
-				<li><strong>Vision    : </strong>Heaven on Earth.
-				</li>
-				<li><strong>Mission   : </strong>Awakening Divinity in Human Being.
-				</li>
-				<li><strong>Ethics    : </strong>Global Family (Vasudhaiv Kutumbakam) & Oneness (Atmavat Sarv Bhuteshu)
-				</li>
-				<li><strong>Values    : </strong>Transform Ourselves the World will Transforms, Reform Ourselves the World will Reform (Hum Badlenge Yug Badlega, Hum Sudhrenge Yug Sudhrega)
-				</li>
+				<li><strong>Vision    : </strong>Heaven on Earth.</li>
+				<li><strong>Mission   : </strong>Awakening Divinity in Human Being.</li>
+				<li><strong>Ethics    : </strong>Global Family (Vasudhaiv Kutumbakam) & Oneness (Atmavat Sarv Bhuteshu)</li>
+				<li><strong>Values    : </strong>Transform Ourselves the World will Transforms, Reform Ourselves the World will Reform (Hum Badlenge Yug Badlega, Hum Sudhrenge Yug Sudhrega)</li>
 			</ul>
         </section>
         <section className='awgp'>
