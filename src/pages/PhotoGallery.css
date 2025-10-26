@@ -128,50 +128,14 @@
   font-weight: 600;
   position: relative;
   padding: 4px 0;
-  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .past-photo-link:hover {
   color: orangered;
+  border-color: orangered;
 }
-
-.past-photo-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  height: 2px;
-  width: 0;
-  background: linear-gradient(to right, transparent, orangered, transparent);
-  transition: width 0.3s, left 0.4s;
-  transform: translateX(-50%);
-}
-
-.past-photo-link:hover::after,
-.past-photo-link.active::after {
-  width: 100%;
-  left: 50%;
-}
-
-/* overline element */
-.past-photo-link::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  height: 2px;
-  width: 0;
-  background: linear-gradient(to right, transparent, orangered, transparent);
-  transition: width 0.3s, left 0.4s;
-  transform: translateX(-50%);
-}
-
-.past-photo-link:hover::before,
-.past-photo-link.active::before {
-  width: 100%;
-  left: 50%;
-}
-
 /* ========== RESPONSIVE ========== */
 @media (max-width: 900px) {
   .photo-years-grid {

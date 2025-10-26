@@ -5,15 +5,15 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10rem;
-  padding: 15rem;
-  /* width: 100%; */
-  height: 100vh;
+  gap: 6rem; /* smaller gap */
+  padding: 5rem 4rem; /* reduced padding */
   background: radial-gradient(circle at top left, #FFF8E1, #FFE082, #FFB300);
   color: #5D4037;
-  /* font-family: 'Poppins', sans-serif; */
-  border-radius: 16px;
   box-shadow: 0 4px 18px rgba(255, 152, 0, 0.25);
+  width: 100%;
+  max-width: 100vw;   /* ✅ prevents horizontal overflow */
+  overflow-x: hidden; /* ✅ hides any accidental overflow */
+  min-height: 100vh;  /* ✅ replaces height:100vh so it can grow vertically */
 }
 
 /* ========== CONTACT DETAILS ========== */
@@ -150,17 +150,25 @@
 }
 
 /* ========== RESPONSIVE ========== */
-@media (max-width: 900px) {
+@media (max-width: 850px) {
   .contact-section {
     flex-direction: column;
-    gap: 3rem;
-    padding: 4rem 2rem;
+    align-items: center;
+    gap: 2rem;
+    /* padding: 3rem 1.5rem; ✅ smaller padding on mobile */
+    min-height: auto; /* ✅ allow natural height growth */
+    /* margin-top: 30px; */
   }
 
   .contact-details-container,
   .contact-form-container {
     width: 100%;
-    max-width: 600px;
+    max-width: 90vw; /* ✅ keeps them inside screen */
+  }
+
+  .detail-item span,
+  .detail-item a {
+    word-break: break-word; /* ✅ ensures long text wraps */
   }
 
   .contact-form .form-row {

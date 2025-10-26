@@ -280,3 +280,50 @@
     rgba(255, 50, 0, 0) 100%
   );
 }
+
+@media (max-width: 850px) {
+  /* Make the entire support section a horizontal scroll row */
+  .support {
+    flex-direction: row;
+    flex-wrap: nowrap;             /* keep them in one row */
+    justify-content: flex-start;
+    align-items: stretch;
+    height: auto;
+    overflow-x: auto;              /* ✅ enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* smooth snapping between cards */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Each card-style div */
+  .support > div {
+    flex: 0 0 75%;                 /* each card takes 85% of screen width */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    scroll-snap-align: center;     /* snap alignment */
+    /* border-radius: 16px; */
+    /* margin: 1rem; */
+  }
+
+  /* Adjust heading size for better readability */
+  .support-h2 h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Reduce input widths */
+  .support input,
+  .support select {
+    width: 250px;
+  }
+
+  .pooja input,
+  .pooja select {
+    width: 250px;
+  }
+
+  /* Optional: hide scrollbars for cleaner UI */
+  .support::-webkit-scrollbar {
+    display: none;
+  }
+}

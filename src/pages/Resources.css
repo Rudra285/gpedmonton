@@ -3,23 +3,94 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 2rem 0;
+  background: linear-gradient(180deg, #fff8e1, #ffe082);
+  color: #4e342e;
+  font-family: 'Poppins', sans-serif;
 }
 
 .resource-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 0;
+  text-align: center;
+  padding: 5rem 2rem;
   width: 100%;
+  border-bottom: 1px solid rgba(255, 160, 0, 0.2);
+  position: relative;
+  height: 50vh;
 }
 
-.resource-section h2 {
-  margin-bottom: 2rem;
+.resource-section:nth-child(even) {
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+}
+
+.resource-section:nth-child(odd) {
+  background: linear-gradient(135deg, #fff8e1, #ffecb3);
+}
+
+.resource-section p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6d4c41;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  max-width: 700px;
+  line-height: 1.5;
 }
 
 .music-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+  justify-items: center;
+  padding-top: 2rem;
 }
+
+.resource-section svg {
+  font-size: 3rem;
+  color: #ff6f00;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.resource-section h2 {
+  font-size: 2rem;
+  color: #ff6f00;
+  text-shadow: 0 2px 6px rgba(255, 190, 80, 0.4);
+  margin-bottom: 1rem;
+}
+
+.video-archive-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0 0;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.video-archive-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffb300, #ff6f00);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.video-archive-link:hover {
+  background: linear-gradient(135deg, #ffa000, #e65100);
+  transform: scale(1.05);
+  color: #fff;
+}
+
+

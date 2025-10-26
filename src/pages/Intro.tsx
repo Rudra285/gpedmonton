@@ -107,7 +107,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                 </form>
             </div>
 
-            <div className='pooja' style={{ backgroundImage: `url(${pooja})` }}>
+            <div className='pooja' style={{ backgroundImage: `url(${pooja})` }} id='pooja'>
                 <div className='support-h2'>
                     <h2>Want to book a session?</h2>
                 </div>

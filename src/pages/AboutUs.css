@@ -92,6 +92,21 @@ ul {
     list-style: none;
 }
 
+.brochure {
+  display: inline-block;
+  margin: 0.5rem;
+  color: #ff6f00;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.brochure:hover {
+  color: #e65100;
+  border-color: #ffb300;
+}
+
 /* small decorative icon bullet (orange dot) */
 .about-us li::before {
   content: "☀";

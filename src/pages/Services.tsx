@@ -23,7 +23,15 @@ const Services = forwardRef<HTMLElement>((props, ref) => {
                 <li><HashLink smooth to="/services/#katha" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="services-link">Satyanarayan Katha</HashLink></li>
                 <li><HashLink smooth to="/services/#griha" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="services-link">Griha Pravesh</HashLink></li>
                 <li><HashLink smooth to="/services/#vivah" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="services-link">Vivah Sansakaar</HashLink></li>
-                <li><HashLink smooth to="/#support-us" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="services-link">Other rituals on demand</HashLink></li>
+                <li><HashLink smooth to="/#support-us" className="services-link"
+                    scroll={() => {
+                        const isMobile = window.innerWidth <= 850;
+                        const el = document.getElementById(isMobile ? "pooja" : "support-us");
+                        el?.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }}
+                >
+                    Other rituals on demand
+                </HashLink></li>
             </ul>
         </section>
         <section ref={ref} className='havan-yagya' id="havan-yagya">
@@ -47,7 +55,15 @@ const Services = forwardRef<HTMLElement>((props, ref) => {
                 <a href={samagri_english} target="_blank" rel="noopener noreferrer">List of Yagya/Pooja items - English</a>
                 <a href={samagri_gujarati} target="_blank" rel="noopener noreferrer">List of Yagya/Pooja items - Gujarati</a>
             </div>
-            <li className='request'><HashLink smooth to="/#support-us" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="request-link">Request for Havan Yagya</HashLink></li>
+            <li className='request'><HashLink smooth to="/#support-us" className="request-link"
+                scroll={() => {
+                    const isMobile = window.innerWidth <= 850;
+                    const el = document.getElementById(isMobile ? "pooja" : "support-us");
+                    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+            >
+                Request for Havan Yagya
+            </HashLink></li>
         </section>
         <section ref={ref} className='deep-yagya' id="deep-yagya">
             <div>
@@ -69,7 +85,15 @@ const Services = forwardRef<HTMLElement>((props, ref) => {
             <p>
                 Despite the easy mode of performance and minimal rituals, the inspirations imbibed in the mantras and method of Deep Yagyas carry excellent impact in reaching the teachings and light of Yagya at people’s heart and influencing the subtle domains of thought and sentiments.
             </p>
-            <li className='request'><HashLink smooth to="/#support-us" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="request-link">Request for Deep Yagya</HashLink></li>
+            <li className='request'><HashLink smooth to="/#support-us" className="request-link"
+                scroll={() => {
+                    const isMobile = window.innerWidth <= 850;
+                    const el = document.getElementById(isMobile ? "pooja" : "support-us");
+                    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+            >
+                Request for Deep Yagya
+            </HashLink></li>
         </section>
         <section ref={ref} className='katha' id="katha">
             <div>
@@ -91,7 +115,15 @@ const Services = forwardRef<HTMLElement>((props, ref) => {
             <p>
                 Another requirement of the puja is that the story of the puja be heard among all those observing and partaking in the puja.
             </p>
-            <li className='request'><HashLink smooth to="/#support-us" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="request-link">Request for Satyanarayan Katha</HashLink></li>
+            <li className='request'><HashLink smooth to="/#support-us" className="request-link"
+                scroll={() => {
+                    const isMobile = window.innerWidth <= 850;
+                    const el = document.getElementById(isMobile ? "pooja" : "support-us");
+                    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+            >
+                Request for Satyanarayan Katha
+            </HashLink></li>
         </section>
         <section ref={ref} className='griha' id="griha">
             <div>
@@ -104,7 +136,15 @@ const Services = forwardRef<HTMLElement>((props, ref) => {
             <p>
                 A house is regarded as one of the most precious belongings for an individual. Often it becomes an object of other's jealousy which is considered bad for the overall peace of the house. When the host seeks the blessings of Lord Ganesha, he also ensures that Ganesha would safeguard his property from all types of evils and their intensions.
             </p>
-            <li className='request'><HashLink smooth to="/#support-us" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="request-link">Request for Griha Pravesh</HashLink></li>
+            <li className='request'><HashLink smooth to="/#support-us" className="request-link"
+                scroll={() => {
+                    const isMobile = window.innerWidth <= 850;
+                    const el = document.getElementById(isMobile ? "pooja" : "support-us");
+                    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+            >
+                Request for Griha Pravesh
+            </HashLink></li>
         </section>
         <section ref={ref} className='vivah' id="vivah">
             <div>
@@ -132,7 +172,15 @@ const Services = forwardRef<HTMLElement>((props, ref) => {
                 <li className='vivah-points'><strong>Saatvik offsprings born: </strong>When a wedding is performed with a saatvik sanskar, the offspring is saatvik from birth itself.</li>
                 <li className='vivah-points'><strong>Family health is maintained and the children are inspired to lead a life abiding by Dharma: </strong>An ideal lifestyle of the parents and celebration of various festivals and observance of vrats (fasts) and family traditions, helps maintain the health of the family. The children too derive inspiration to lead a life abiding by Dharma.</li>
             </ul>
-            <li className='request'><HashLink smooth to="/#support-us" scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })} className="request-link">Request for Vivah Sanskaar</HashLink></li>
+            <li className='request'><HashLink smooth to="/#support-us" className="request-link"
+                scroll={() => {
+                    const isMobile = window.innerWidth <= 850;
+                    const el = document.getElementById(isMobile ? "pooja" : "support-us");
+                    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+            >
+                Request for Vivah Sanskaar
+            </HashLink></li>
         </section>
     </main>
   );

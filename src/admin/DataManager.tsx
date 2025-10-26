@@ -129,30 +129,32 @@ const DataManager: React.FC = () => {
             Object.entries(grouped).map(([eventName, regs]) => (
               <div key={eventName} className="event-section">
                 <h3 className="event-header">{eventName}</h3>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Phone</th>
-                      <th>Attendees</th>
-                      <th>Special Requests</th>
-                      <th>Date</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {regs.map((r) => (
-                      <tr key={r._id}>
-                        <td>{r.firstName} {r.lastName}</td>
-                        <td>{r.email}</td>
-                        <td>{r.phone || "-"}</td>
-                        <td>{r.attendees}</td>
-                        <td>{r.specialRequests || "-"}</td>
-                        <td>{new Date(r.timestamp).toLocaleString()}</td>
+                <div className="table-wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Attendees</th>
+                        <th>Special Requests</th>
+                        <th>Date</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      {regs.map((r) => (
+                        <tr key={r._id}>
+                          <td>{r.firstName} {r.lastName}</td>
+                          <td>{r.email}</td>
+                          <td>{r.phone || "-"}</td>
+                          <td>{r.attendees}</td>
+                          <td>{r.specialRequests || "-"}</td>
+                          <td>{new Date(r.timestamp).toLocaleString()}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
 
                 <div style={{ marginTop: "20px", textAlign: "center" }}>
                   <button
@@ -175,20 +177,22 @@ const DataManager: React.FC = () => {
             <p>No subscribers yet.</p>
           ) : (
             <>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Email</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {subscribers.map((s) => (
-                    <tr key={s._id}>
-                      <td>{s.email}</td>
+              <div className="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Email</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {subscribers.map((s) => (
+                      <tr key={s._id}>
+                        <td>{s.email}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
 
               <div style={{ marginTop: "20px", textAlign: "center" }}>
                 <button onClick={exportSubscribers} className="export-button">

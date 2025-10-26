@@ -35,6 +35,7 @@ AWGP is a large organization devoted to thought transformation movement, dissemi
             </ul>
             <p><strong>Gayatri Pariwar, Edmonton performs regularly the following rituals for its followers:</strong></p>
             <ul>
+                <li>Gayatri Havan Yagya</li>
                 <li>Gayatri Deep Yagya</li>
                 <li>Grih Pravesh</li>
                 <li>Punsavan Sanskar</li>
@@ -45,7 +46,7 @@ AWGP is a large organization devoted to thought transformation movement, dissemi
         </section>
         <section className='pragyakunj'>
             <h1>Pragyakunj</h1>
-            <a href={brochure} target="_blank" rel="noopener noreferrer">Download our Brochure</a>
+            <a href={brochure} target="_blank" rel="noopener noreferrer" className='brochure'>Download our Brochure</a>
         </section>
     </main>
   );
