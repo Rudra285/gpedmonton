@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from "react-router-hash-link";
 import { FaChevronDown } from "react-icons/fa";
+import logo from '../images/logo.png';
 import './Navbar.css';
 
 interface NavbarProps {
@@ -20,8 +21,10 @@ const Navbar: React.FC<NavbarProps> = ({ className, /*onDonateClick*/ }) => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${className || ''}`}>
       <div className="navbar-content">
-        <div>
-          <Link to="/" className="brand">Gayatri Pariwar Edmonton|</Link>
+        <div className='brand-container'>
+          <Link to="/" className="brand">
+            <img src={logo} alt="Logo" className="logo" />
+            Gayatri Pariwar Edmonton|</Link>
           <Link to="/admin" className="nav-link">Admin</Link>
         </div>
         <ul className="nav-links">

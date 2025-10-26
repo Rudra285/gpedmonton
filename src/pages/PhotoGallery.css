@@ -1,13 +1,36 @@
+/* ========== ROOT WRAPPER ========== */
 .photos-root {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 5rem 0;
+  padding: 6rem 2rem;
+  background: radial-gradient(circle at top, #FFF8E1 0%, #FFE082 40%, #FFB300 100%);
+  color: #5D4037;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* === CURRENT PHOTOS === */
+/* Headings */
+.photos-root h1 {
+  font-size: 2.5rem;
+  color: #C62828;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.photos-root h2 {
+  font-size: 1.8rem;
+  color: #E65100;
+  margin-top: 2rem;
+  text-transform: capitalize;
+  border-bottom: 3px solid #FFB300;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* ========== CURRENT PHOTOS ========== */
 .current-photos-section {
   display: flex;
   justify-content: center;
@@ -16,28 +39,38 @@
   padding: 4rem 0;
 }
 
-/* 🟠 Place each year side by side as columns */
+/* Grouped by year */
 .photo-years-grid {
   display: flex;
-  flex-direction: row; /* <-- columns, not rows */
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 5rem;
+  gap: 4rem;
   width: 100%;
-  max-width: 1200px; /* keeps it centered and tidy */
+  max-width: 1200px;
 }
 
-/* Each year’s column */
+/* Each year container */
 .photo-years-grid > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 45%; /* half width for two columns */
+  width: 45%;
   min-width: 300px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 6px 16px rgba(255, 179, 0, 0.25);
+  transition: all 0.3s ease;
 }
 
-/* Photos stacked within each year’s column */
+.photo-years-grid > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(255, 152, 0, 0.4);
+}
+
+/* Photo cards per year */
 .current-photos-list {
   display: flex;
   flex-direction: column;
@@ -46,65 +79,62 @@
   margin-top: 1.5rem;
 }
 
-/* Photo card size */
+/* ========== PHOTO CARD OVERRIDES (light tweak to Photos.css) ========== */
 .photo-card {
-  width: 220px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  width: 240px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #FFF8E1, #FFECB3, #FFD54F);
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .photo-card:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 152, 0, 0.45);
 }
 
-.photo-card-img {
+/* ========== ARCHIVE SECTION ========== */
+.past-photos-section {
+  margin-top: 5rem;
   width: 100%;
-  height: 160px;
-  object-fit: contain;
-  background: #f5f5f5;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 16px rgba(255, 152, 0, 0.25);
 }
 
-/* Responsive: stack years vertically on smaller screens */
-@media (max-width: 900px) {
-  .photo-years-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .photo-years-grid > div {
-    width: 90%;
-  }
+.past-photos-section h2 {
+  color: #C62828;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
 }
 
-/* === PAST PHOTOS === */
+/* Archive list */
 .past-photos-section ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  width: 100%;
+  gap: 1.2rem 2rem;
   list-style: none;
-  margin-top: 2rem;
   padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
+/* Archive links */
 .past-photo-link {
   text-decoration: none;
-  color: orange;
-  font-weight: 500;
-  transition: color 0.2s;
+  color: #E65100;
+  font-weight: 600;
   position: relative;
   padding: 4px 0;
+  transition: color 0.3s ease;
 }
 
 .past-photo-link:hover {
   color: orangered;
 }
 
-/* underline element */
 .past-photo-link::after {
   content: "";
   position: absolute;
@@ -142,22 +172,27 @@
   left: 50%;
 }
 
-/* === RESPONSIVE === */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 900px) {
-  .current-photos-section {
+  .photo-years-grid {
     flex-direction: column;
+    align-items: center;
     gap: 3rem;
   }
 
+  .photo-years-grid > div {
+    width: 90%;
+  }
+
   .photo-card {
-    width: 180px;
+    width: 200px;
   }
 
   .photo-card-img {
-    height: 140px;
+    height: 150px;
   }
 
-  .past-photos-section ul {
-    width: 100%;
+  .past-photos-section {
+    padding: 2rem;
   }
 }

@@ -146,6 +146,9 @@
   color: #F57C00;
   font-weight: 600;
   text-decoration: none;
+  display: block;
+  width: fit-content;
+  margin: 0.5rem auto 0;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 

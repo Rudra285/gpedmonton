@@ -1,47 +1,97 @@
+/* ========== PHOTO CARD CONTAINER ========== */
 .photo-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  background: linear-gradient(145deg, #FFF8E1, #FFE082, #FFECB3);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.25);
   margin: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  overflow: hidden;
+  position: relative;
 }
 
 .photo-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  background: linear-gradient(145deg, #FFECB3, #FFD54F, #FFB300);
+  box-shadow: 0 6px 16px rgba(255, 152, 0, 0.45);
 }
 
+/* ========== LINK BEHAVIOR ========== */
 .photo-card a {
+  text-decoration: none;
   color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
-.photo-card a:hover {
-  color: inherit;
-}
-
+/* ========== IMAGE ========== */
 .photo-card-img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  /* box-shadow: 0 2px 8px rgba(255, 152, 0, 0.25); */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Text styling */
+.photo-card:hover .photo-card-img {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(255, 152, 0, 0.35);
+}
+
+/* ========== INFO SECTION ========== */
+.photo-card-info {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  width: 100%;
+  backdrop-filter: blur(6px);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
 .photo-card-info h3 {
   margin: 0;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #333;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #C62828;
+  letter-spacing: 0.3px;
 }
 
-.contact-card-info p {
+.photo-card-info p {
   margin: 0.3rem 0 0;
-  font-size: 0.95rem;
-  color: #666;
+  font-size: 0.9rem;
+  color: #6D4C41;
+  font-weight: 500;
+}
+
+/* ========== SUBTLE HOVER GLOW ========== */
+.photo-card::before {
+  /* content: ""; */
+  /* position: absolute; */
+  inset: 0;
+  border-radius: 16px;
+  /* background: radial-gradient(circle at center, rgba(255, 179, 0, 0.2), transparent 70%); */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .photo-card {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .photo-card-img {
+    height: 160px;
+  }
 }

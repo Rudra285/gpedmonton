@@ -139,11 +139,13 @@
 }
 
 .video-link {
-  display: inline-block;
+  display: block;
   color: #F57C00;
   text-decoration: none;
   font-weight: 600;
   margin-top: 0.5rem;
+  width: fit-content;
+  margin: 0.5rem auto 0; /* vertical spacing + centering */
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
