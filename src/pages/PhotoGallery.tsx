@@ -18,7 +18,7 @@ const PhotoGallery = forwardRef<HTMLElement>((props, ref) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/photos")
+    fetch("https://gpedmonton-backend.onrender.com/api/photos")
       .then(res => res.json())
       .then(data => {
         setCurrentPhotos(Array.isArray(data.current) ? data.current : []);
@@ -66,7 +66,7 @@ const PhotoGallery = forwardRef<HTMLElement>((props, ref) => {
                     key={photo._id}
                     title={photo.title}
                     date={photo.date || ""}
-                    image={`http://localhost:5000/api/proxy/image/${photo.driveFileId}`}
+                    image={`https://gpedmonton-backend.onrender.com/api/proxy/image/${photo.driveFileId}`}
                     link={photo.link}
                   />
                 ))}

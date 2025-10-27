@@ -17,7 +17,7 @@ const Calendar: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/events/upcoming")
+    fetch("https://gpedmonton-backend.onrender.com/api/events/upcoming")
       .then((res) => res.json())
       .then((data) => setEvents(data))
       .catch((err) => console.error("Error fetching events:", err));

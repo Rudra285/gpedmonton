@@ -20,7 +20,7 @@ const PhotoManager: React.FC = () => {
   const [imageFile, setImageFile] = useState<File | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/photos")
+    fetch("https://gpedmonton-backend.onrender.com/api/photos")
       .then(res => res.json())
       .then(data => setPhotos(data))
       .catch(err => console.error("Error fetching photos:", err));
@@ -54,7 +54,7 @@ const PhotoManager: React.FC = () => {
         formData.append("date", newPhoto.date);
         formData.append("image", imageFile);
 
-        res = await fetch("http://localhost:5000/api/photos/upload", {
+        res = await fetch("https://gpedmonton-backend.onrender.com/api/photos/upload", {
           method: "POST",
           body: formData,
         });
@@ -62,7 +62,7 @@ const PhotoManager: React.FC = () => {
         const data = await res.json();
         setPhotos(prev => ({ ...prev, current: [...prev.current, data] }));
       } else {
-        res = await fetch("http://localhost:5000/api/photos/archive", {
+        res = await fetch("https://gpedmonton-backend.onrender.com/api/photos/archive", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -90,7 +90,7 @@ const PhotoManager: React.FC = () => {
     if (!window.confirm("Are you sure you want to delete this photo?")) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/api/photos/${id}`, {
+      const res = await fetch(`https://gpedmonton-backend.onrender.com/api/photos/${id}`, {
         method: "DELETE",
       });
 
@@ -156,7 +156,7 @@ const PhotoManager: React.FC = () => {
           ? photos.current.map(p => (
               <div key={p._id} className="photo-item">
                 {p.imageUrl && (
-                  <img src={`http://localhost:5000/api/proxy/image/${p.driveFileId}`} alt={p.title} />
+                  <img src={`https://gpedmonton-backend.onrender.com/api/proxy/image/${p.driveFileId}`} alt={p.title} />
                 )}
                 <h4>{p.title}</h4>
                 <a href={p.link} target="_blank" rel="noopener noreferrer">View Album</a>

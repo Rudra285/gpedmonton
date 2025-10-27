@@ -19,7 +19,7 @@ const Resources = forwardRef<HTMLElement>((props, ref) => {
   });
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/media")
+    fetch("https://gpedmonton-backend.onrender.com/api/media")
       .then((res) => res.json())
       .then((data) => setMedia(data))
       .catch((err) => console.error("Error fetching media:", err));
@@ -37,7 +37,7 @@ const Resources = forwardRef<HTMLElement>((props, ref) => {
               <MusicCard
                 key={item._id}
                 name={item.title}
-                audioUrl={`http://localhost:5000/api/proxy/audio/${item.driveFileId}`}
+                audioUrl={`https://gpedmonton-backend.onrender.com/api/proxy/audio/${item.driveFileId}`}
               />
             ))
           ) : (

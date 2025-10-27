@@ -11,7 +11,7 @@ const CancelRegistration: React.FC = () => {
     const cancelRegistration = async () => {
       try {
         console.log("Fetching registration info for ID:", id);
-        const regRes = await fetch(`http://localhost:5000/api/registrations/id/${id}`);
+        const regRes = await fetch(`https://gpedmonton-backend.onrender.com/api/registrations/id/${id}`);
 
         if (!regRes.ok) {
           console.log("Registration fetch failed:", regRes.status);
@@ -24,7 +24,7 @@ const CancelRegistration: React.FC = () => {
         setEventName(registration.eventName);
 
         console.log("Deleting registration...");
-        const delRes = await fetch(`http://localhost:5000/api/registrations/${id}`, {
+        const delRes = await fetch(`https://gpedmonton-backend.onrender.com/api/registrations/${id}`, {
           method: "DELETE",
         });
 

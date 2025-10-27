@@ -33,7 +33,7 @@ const EventRegistrationForm: React.FC = () => {
     const eventName = state?.eventName || eventNameFromParams || "Unknown Event";
 
     const existingRes = await fetch(
-      `http://localhost:5000/api/registrations/${encodeURIComponent(eventName)}`
+      `https://gpedmonton-backend.onrender.com/api/registrations/${encodeURIComponent(eventName)}`
     );
     const existingRegs = await existingRes.json();
 
@@ -47,7 +47,7 @@ const EventRegistrationForm: React.FC = () => {
     }
 
     try {
-      const saveRes = await fetch("http://localhost:5000/api/registrations", {
+      const saveRes = await fetch("https://gpedmonton-backend.onrender.com/api/registrations", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -63,7 +63,7 @@ const EventRegistrationForm: React.FC = () => {
 
       const registrationId = result.registration._id;
 
-      const mailRes = await fetch("http://localhost:5000/api/mail/register", {
+      const mailRes = await fetch("https://gpedmonton-backend.onrender.com/api/mail/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

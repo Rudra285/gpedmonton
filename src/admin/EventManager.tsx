@@ -38,8 +38,8 @@ const EventManager: React.FC = () => {
   // ✅ Load events on mount
   useEffect(() => {
     Promise.all([
-      fetch("http://localhost:5000/api/events/upcoming").then((r) => r.json()),
-      fetch("http://localhost:5000/api/events/past").then((r) => r.json()),
+      fetch("https://gpedmonton-backend.onrender.com/api/events/upcoming").then((r) => r.json()),
+      fetch("https://gpedmonton-backend.onrender.com/api/events/past").then((r) => r.json()),
     ])
       .then(([upcomingData, pastData]) => {
         setUpcoming(Array.isArray(upcomingData) ? upcomingData : []);
@@ -89,14 +89,14 @@ const EventManager: React.FC = () => {
         // Save to Past Event collection
         formData.append("title", name); // Past events use `title`
         formData.append("image", imageFile);
-        url = "http://localhost:5000/api/events/past/upload";
+        url = "https://gpedmonton-backend.onrender.com/api/events/past/upload";
       } else {
         // Save to Upcoming Event collection
         formData.append("name", name);
         formData.append("desc", desc);
         formData.append("timestamp", String(timestamp));
         formData.append("image", imageFile);
-        url = "http://localhost:5000/api/events/upcoming/upload";
+        url = "https://gpedmonton-backend.onrender.com/api/events/upcoming/upload";
       }
 
       try {
@@ -118,7 +118,7 @@ const EventManager: React.FC = () => {
       const { title } = newPast;
       formData.append("title", title);
       formData.append("image", imageFile);
-      url = "http://localhost:5000/api/events/past/upload";
+      url = "https://gpedmonton-backend.onrender.com/api/events/past/upload";
 
       try {
         const res = await fetch(url, { method: "POST", body: formData });
@@ -139,8 +139,8 @@ const EventManager: React.FC = () => {
     if (!id) return;
     const endpoint =
       view === "upcoming"
-        ? `http://localhost:5000/api/events/upcoming/${id}`
-        : `http://localhost:5000/api/events/past/${id}`;
+        ? `https://gpedmonton-backend.onrender.com/api/events/upcoming/${id}`
+        : `https://gpedmonton-backend.onrender.com/api/events/past/${id}`;
     await fetch(endpoint, { method: "DELETE" });
     if (view === "upcoming")
       setUpcoming((prev) => prev.filter((e) => e._id !== id));
@@ -226,7 +226,7 @@ const EventManager: React.FC = () => {
         {(view === "upcoming" ? upcomingEvents : pastEvents).map((event) => (
           <div key={event._id} className="event-item">
             <img
-              src={`http://localhost:5000/api/proxy/image/${event.driveFileId}`}
+              src={`https://gpedmonton-backend.onrender.com/api/proxy/image/${event.driveFileId}`}
               alt={"name" in event ? event.name : event.title}
             />
             <div>

@@ -30,8 +30,8 @@ const DataManager: React.FC = () => {
     const fetchData = async () => {
       try {
         const [regsRes, subsRes] = await Promise.all([
-          fetch("http://localhost:5000/api/registrations"),
-          fetch("http://localhost:5000/api/subscribe"),
+          fetch("https://gpedmonton-backend.onrender.com/api/registrations"),
+          fetch("https://gpedmonton-backend.onrender.com/api/subscribe"),
         ]);
         const [regsData, subsData] = await Promise.all([regsRes.json(), subsRes.json()]);
         setRegistrations(regsData);

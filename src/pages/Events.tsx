@@ -9,8 +9,8 @@ const Events: React.FC = () => {
 
   useEffect(() => {
     Promise.all([
-        fetch("http://localhost:5000/api/events/upcoming").then(res => res.json()),
-        fetch("http://localhost:5000/api/events/past").then(res => res.json())
+        fetch("https://gpedmonton-backend.onrender.com/api/events/upcoming").then(res => res.json()),
+        fetch("https://gpedmonton-backend.onrender.com/api/events/past").then(res => res.json())
     ])
     .then(([upcomingData, pastData]) => {
         setUpcoming(Array.isArray(upcomingData) ? upcomingData : []);
@@ -32,7 +32,7 @@ const Events: React.FC = () => {
                 key={event._id}
                 name={event.name}
                 date={event.date}
-                image={`http://localhost:5000/api/proxy/image/${event.driveFileId}`}
+                image={`https://gpedmonton-backend.onrender.com/api/proxy/image/${event.driveFileId}`}
                 desc={event.desc}
                 timestamp={event.timestamp}
               />
@@ -50,7 +50,7 @@ const Events: React.FC = () => {
             pastEvents.map(event => (
               <div key={event._id}>
                 <img
-                  src={`http://localhost:5000/api/proxy/image/${event.driveFileId}`}
+                  src={`https://gpedmonton-backend.onrender.com/api/proxy/image/${event.driveFileId}`}
                   alt={event.name}
                   className="past-event-img"
                 />
