@@ -45,7 +45,7 @@ const EventManager: React.FC = () => {
         setUpcoming(Array.isArray(upcomingData) ? upcomingData : []);
         setPast(Array.isArray(pastData) ? pastData : []);
       })
-      .catch((err) => console.error("❌ Error loading events:", err));
+      .catch((err) => console.error("Error loading events:", err));
   }, []);
 
   // ✅ Handle text and date/time inputs
