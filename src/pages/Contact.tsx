@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
     console.log("Submitted data:", formData);
     // send data to backend / API here
     try {
-      const res = await fetch("http://localhost:5000/mail/api/contact", {
+      const res = await fetch("http://localhost:5000/api/mail/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData), // send exactly name, email, message

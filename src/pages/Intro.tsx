@@ -26,6 +26,21 @@ const Intro = forwardRef<HTMLElement>((_, ref) => {
     const handleSubscribe = async (e: React.FormEvent) => {
         e.preventDefault();
         console.log("Submitted data:", formData);
+
+        const existingRes = await fetch(
+            `http://localhost:5000/api/subscribe`
+        );
+        const existingRegs = await existingRes.json();
+
+        const alreadySubscribed = existingRegs.some(
+            (r: any) => r.email.toLowerCase() === formData.subEmail.toLowerCase()
+        );
+
+        if (alreadySubscribed) {
+            alert("You are already subscribed!");
+            return;
+        }
+        
         // send data to backend / API here
         const saveRes = await fetch("http://localhost:5000/api/subscribe", {
             method: "POST",
@@ -38,6 +53,11 @@ const Intro = forwardRef<HTMLElement>((_, ref) => {
         const result = await saveRes.json();
         console.log("Subscribed:", result);
         alert("Subscribed!");
+
+        setFormData((prev) => ({
+            ...prev,
+            subEmail: "",
+        })); // reset form
     };
 
     const handleRequest = async (e: React.FormEvent) => {

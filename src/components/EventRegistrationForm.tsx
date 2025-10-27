@@ -32,6 +32,20 @@ const EventRegistrationForm: React.FC = () => {
   const onSubmit = async (data: FormData) => {
     const eventName = state?.eventName || eventNameFromParams || "Unknown Event";
 
+    const existingRes = await fetch(
+      `http://localhost:5000/api/registrations/${encodeURIComponent(eventName)}`
+    );
+    const existingRegs = await existingRes.json();
+
+    const alreadyRegistered = existingRegs.some(
+      (r: any) => r.email.toLowerCase() === data.email.toLowerCase()
+    );
+
+    if (alreadyRegistered) {
+      alert("You have already registered for this event!");
+      return;
+    }
+
     try {
       const saveRes = await fetch("http://localhost:5000/api/registrations", {
         method: "POST",
@@ -45,7 +59,7 @@ const EventRegistrationForm: React.FC = () => {
       if (!saveRes.ok) throw new Error("Failed to submit registration");
 
       const result = await saveRes.json();
-      console.log("✅ Registration saved:", result);
+      console.log("Registration saved:", result);
 
       const registrationId = result.registration._id;
 
@@ -65,13 +79,13 @@ const EventRegistrationForm: React.FC = () => {
       });
 
       if (!mailRes.ok) throw new Error("Failed to send confirmation email.");
-      console.log("✅ Confirmation email sent.");
+      console.log("Confirmation email sent.");
 
       alert(`Registration successful for ${eventName}!`);
 
       navigate("/events");
     } catch (err) {
-      console.error("❌ Error submitting registration:", err);
+      console.error("Error submitting registration:", err);
       alert("Something went wrong. Please try again.");
     }
   };

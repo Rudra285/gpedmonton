@@ -50,7 +50,7 @@ const Events: React.FC = () => {
             pastEvents.map(event => (
               <div key={event._id}>
                 <img
-                  src={`http://localhost:5000${event.imageUrl}`}
+                  src={`http://localhost:5000/api/proxy/image/${event.driveFileId}`}
                   alt={event.name}
                   className="past-event-img"
                 />
