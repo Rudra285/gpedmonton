@@ -45,7 +45,16 @@ AWGP is a large organization devoted to thought transformation movement, dissemi
             </ul>
         </section>
         <section className='pragyakunj'>
-            <h1>Pragyakunj</h1>
+            <h1>Pragyakunj – Centre for Spiritual and Holistic Wellness</h1>
+            <p>
+                Nestled amidst 56 serene acres in Sherwood Park, Pragyakunj is the spiritual and community centre of All World Gayatri Pariwar, Edmonton. It is envisioned as a sacred space dedicated to nurturing body, mind, and soul through the timeless principles of Gayatri and Yagya.
+            </p>
+            <p>
+                Pragyakunj serves as a hub for spiritual growth, holistic health, environmental harmony, and community service. Through regular activities such as yoga, meditation, satsangs, cultural programs, and wellness workshops, it strives to promote inner peace, collective well-being, and thought transformation (Yug Nirman).
+            </p>
+            <p>
+                Guided by the ideals of Pt. Shriram Sharma Acharya and Mata Bhagwati Devi Sharma, Pragyakunj embodies the vision of creating a divine civilization rooted in self-development, service, and spiritual awakening — a place where every soul can connect, heal, and contribute to building a better world.
+            </p>
             <a href={brochure} target="_blank" rel="noopener noreferrer" className='brochure'>Download our Brochure</a>
         </section>
     </main>
