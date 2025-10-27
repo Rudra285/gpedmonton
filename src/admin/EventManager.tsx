@@ -8,12 +8,14 @@ interface UpcomingEvent {
   desc: string;
   imageUrl?: string;
   timestamp?: number;
+  driveFileId?: string;
 }
 
 interface PastEvent {
   _id?: string;
   title: string;
   imageUrl?: string;
+  driveFileId?: string;
 }
 
 const EventManager: React.FC = () => {
@@ -224,7 +226,7 @@ const EventManager: React.FC = () => {
         {(view === "upcoming" ? upcomingEvents : pastEvents).map((event) => (
           <div key={event._id} className="event-item">
             <img
-              src={`http://localhost:5000${event.imageUrl}`}
+              src={`http://localhost:5000/api/proxy/image/${event.driveFileId}`}
               alt={"name" in event ? event.name : event.title}
             />
             <div>

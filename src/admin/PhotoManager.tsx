@@ -156,7 +156,7 @@ const PhotoManager: React.FC = () => {
           ? photos.current.map(p => (
               <div key={p._id} className="photo-item">
                 {p.imageUrl && (
-                  <img src={`http://localhost:5000/api/images/${p.driveFileId}`} alt={p.title} />
+                  <img src={`http://localhost:5000/api/proxy/image/${p.driveFileId}`} alt={p.title} />
                 )}
                 <h4>{p.title}</h4>
                 <a href={p.link} target="_blank" rel="noopener noreferrer">View Album</a>

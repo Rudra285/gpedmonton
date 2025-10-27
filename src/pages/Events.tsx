@@ -32,7 +32,7 @@ const Events: React.FC = () => {
                 key={event._id}
                 name={event.name}
                 date={event.date}
-                image={`http://localhost:5000${event.imageUrl}`}
+                image={`http://localhost:5000/api/proxy/image/${event.driveFileId}`}
                 desc={event.desc}
                 timestamp={event.timestamp}
               />

@@ -7,6 +7,7 @@ interface MediaData {
   audioUrl?: string; // for uploaded audio
   videoLink?: string; // for video links
   type: "music" | "video";
+  driveFileId?: string;
 }
 
 const MediaManager: React.FC = () => {
@@ -75,7 +76,7 @@ const MediaManager: React.FC = () => {
       setNewMedia({ title: "", link: "" });
       setFile(null);
     } catch (err) {
-      console.error("❌ Upload failed:", err);
+      console.error("Upload failed:", err);
       alert("Failed to upload media.");
     }
   };
@@ -159,7 +160,7 @@ const MediaManager: React.FC = () => {
                 <h4>{m.title}</h4>
                 {m.audioUrl && (
                   <audio controls>
-                    <source src={`http://localhost:5000${m.audioUrl}`} type="audio/mpeg" />
+                    <source src={`http://localhost:5000/api/proxy/audio/${m.driveFileId}`} type="audio/mpeg" />
                   </audio>
                 )}
                 <button

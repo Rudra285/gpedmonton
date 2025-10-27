@@ -8,6 +8,7 @@ interface PhotoData {
   date?: string;
   imageUrl?: string;
   link: string;
+  driveFileId?: string;
   isArchived?: boolean;
 }
 
@@ -65,7 +66,7 @@ const PhotoGallery = forwardRef<HTMLElement>((props, ref) => {
                     key={photo._id}
                     title={photo.title}
                     date={photo.date || ""}
-                    image={`${photo.imageUrl}`}
+                    image={`http://localhost:5000/api/proxy/image/${photo.driveFileId}`}
                     link={photo.link}
                   />
                 ))}

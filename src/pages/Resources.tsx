@@ -9,6 +9,7 @@ interface MediaData {
   audioUrl?: string;
   videoLink?: string;
   type: "music" | "video";
+  driveFileId?: string;
 }
 
 const Resources = forwardRef<HTMLElement>((props, ref) => {
@@ -36,7 +37,7 @@ const Resources = forwardRef<HTMLElement>((props, ref) => {
               <MusicCard
                 key={item._id}
                 name={item.title}
-                audioUrl={`http://localhost:5000${item.audioUrl}`}
+                audioUrl={`http://localhost:5000/api/proxy/audio/${item.driveFileId}`}
               />
             ))
           ) : (
