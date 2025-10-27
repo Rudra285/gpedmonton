@@ -1,4 +1,5 @@
 import React, { forwardRef, useState } from 'react';
+import { Link } from "react-router-dom";
 import { FaFacebookF } from "react-icons/fa";
 import squareLogo from '../assets/images/square-logo.png'
 import qrWhatsApp from '../assets/images/whatsapp_qr.jpeg';
@@ -90,6 +91,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                 <img src={qrWhatsApp} alt="What's App Join" className='qrWhatsApp'/>
                 <form onSubmit={handleSubscribe} className="subscribe-form">
                     <p>Subscribe to our newsletter</p>
+                    <li className="terms-link"><Link to="/privacy">Terms & Conditions</Link></li>
                     <div className="form-row">
                         <input
                             type="text"
@@ -112,7 +114,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                     <h2>Want to book a session?</h2>
                 </div>
                 <form onSubmit={handleRequest} className="pooja-form">
-                    <p>Select a pooja session to request</p>
+                    <p>Select a puja session to request</p>
                     <div className="form-row">
                         <select
                             name="pooja"
@@ -174,10 +176,8 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                     </div>
                     <br/>
                     <br/>
-                    <br/>
-                    <br/>
-                    <br/>
                 </form>
+                <p className="disclaimer-warning">Please review the disclaimer <sup>(#5)</sup></p>
             </div>
 
             {/* Flex Item 2 */}
@@ -215,7 +215,12 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
 				<li>Makes no representation as to the reliability of information provided, or of the reference resources. 
 					Any person who chooses to review any information on this website, or at reference sources 
 					cited herein, assumes all risk arising from or relating thereto </li>
+                <li>Submission of the puja request form does not confirm the Puja request. Your information will be reviewed by our team, and a representative from Gayatri Pariwar Edmonton will contact you to confirm the details, date, and availability before finalizing the Puja.</li>
 			</ol>
+            <p className="rights">
+                © {new Date().getFullYear()} Gayatri Pariwar Edmonton. All rights reserved.
+            </p>
+            <li className="privacy-link"><Link to="/privacy">Terms of Use & Privacy Policy</Link></li>
         </section>
     </main>
   );

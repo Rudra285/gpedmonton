@@ -156,6 +156,19 @@ textarea:focus {
   transform: scale(1.1);
 }
 
+.conditions-link a {
+  color: #fff; /* golden yellow to match headings */
+  border-bottom: 1px solid #FFF;
+}
+
+.conditions-link a:hover {
+  color: #FFF;
+}
+
+.conditions-link {
+  list-style: none;
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .form-container {

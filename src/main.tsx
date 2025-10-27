@@ -12,6 +12,7 @@ import Resources from './pages/Resources';
 import ScrollTop from './components/ScrollTop';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminLogin from './pages/AdminLogin';
+import Privacy from './pages/Privacy';
 import EventRegistrationForm from "./components/EventRegistrationForm";
 import CancelRegistration from "./components/CancelRegistration";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -33,6 +34,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path="/contact" element={<Contact />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="/admin"
             element={
               <ProtectedRoute>

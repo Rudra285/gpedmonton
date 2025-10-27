@@ -2,9 +2,8 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import './EventRegistrationForm.css'
 import squareLogo from '../assets/images/square-logo.png'
-import { useParams, useLocation } from "react-router-dom";
+import { useParams, useLocation, Link, useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import { useNavigate } from "react-router-dom";
 
 interface FormData {
   firstName: string;
@@ -123,7 +122,7 @@ const EventRegistrationForm: React.FC = () => {
 
         {/* Agreement */}
         <div className="terms-group">
-          <span>I agree to the terms & conditions</span>
+          <li className="conditions-link"><Link to="/privacy">Terms & Conditions</Link></li>
         </div>
         {errors.agree && <p className="error">You must agree before submitting.</p>}
 
