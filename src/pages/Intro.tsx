@@ -90,8 +90,8 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                 <h3>Join Us</h3>
                 <img src={qrWhatsApp} alt="What's App Join" className='qrWhatsApp'/>
                 <form onSubmit={handleSubscribe} className="subscribe-form">
-                    <p>Subscribe to our newsletter</p>
                     <li className="terms-link"><Link to="/privacy">Terms & Conditions</Link></li>
+                    <p>Subscribe to our newsletter</p>
                     <div className="form-row">
                         <input
                             type="text"
