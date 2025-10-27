@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
-import Registration from "./EventRegistrationForm";
 
 
 const Layout: React.FC = () => {

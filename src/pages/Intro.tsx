@@ -9,7 +9,7 @@ import pooja from '../assets/images/slide_35.png';
 import donate from '../assets/images/slide_2.png';
 import './Intro.css';
 
-const Intro = forwardRef<HTMLElement>((props, ref) => {
+const Intro = forwardRef<HTMLElement>((_, ref) => {
     const [formData, setFormData] = useState({
         pooja: "",
         subEmail: "",
@@ -45,7 +45,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
         console.log("Submitted data:", formData);
         // send data to backend / API here
         try {
-            const res = await fetch("http://localhost:5000/api/request", {
+            const res = await fetch("http://localhost:5000/api/mail/pooja", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData), // send exactly name, email, message

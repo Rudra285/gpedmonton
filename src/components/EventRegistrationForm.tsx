@@ -49,7 +49,7 @@ const EventRegistrationForm: React.FC = () => {
 
       const registrationId = result.registration._id;
 
-      const mailRes = await fetch("http://localhost:5000/api/register", {
+      const mailRes = await fetch("http://localhost:5000/api/mail/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
