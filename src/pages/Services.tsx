@@ -1,8 +1,6 @@
 import React, { forwardRef } from 'react';
 import './Services.css';
 import { HashLink } from "react-router-hash-link";
-import samagri_english from '../assets/yagya_samagri_list_e.pdf';
-import samagri_gujarati from '../assets/images/yagya_samagri_list_g.png';
 import yagya_logo from '../assets/images/yagya_logo.png';
 import deep_logo from '../assets/images/deep_logo.png';
 import katha_logo from '../assets/images/katha_logo.png';
@@ -52,8 +50,8 @@ const Services = forwardRef<HTMLElement>((props, ref) => {
                 Literally speaking, Yagya means - selfless sacrifice for noble purposes. Sacrificing ego, selfishness and material attachments and adopting rational thinking, humane compassion and dedicated creativity for the welfare of all - is indeed the best Yagya which should be performed by all human beings. The philosophy of Yagya teaches a way of living in the society in harmony, a living style to promote and protect higher humane values in the society - which is indeed the basis of the ideal human culture.
             </p>
             <div className='havan-list'>
-                <a href={samagri_english} target="_blank" rel="noopener noreferrer">List of Yagya/Pooja items - English</a>
-                <a href={samagri_gujarati} target="_blank" rel="noopener noreferrer">List of Yagya/Pooja items - Gujarati</a>
+                <a href="/yagya_samagri_list_e.pdf" target="_blank" rel="noopener noreferrer">List of Yagya/Pooja items - English</a>
+                <a href="/yagya_samagri_list_g.png" target="_blank" rel="noopener noreferrer">List of Yagya/Pooja items - Gujarati</a>
             </div>
             <li className='request'><HashLink smooth to="/#support-us" className="request-link"
                 scroll={() => {

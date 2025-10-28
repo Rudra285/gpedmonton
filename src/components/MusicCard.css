@@ -22,59 +22,31 @@
   color: #e65100;
   font-size: 1.1rem;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-.icon-wrapper {
+.play-btn {
+  background: radial-gradient(circle at center, #ffb74d 0%, #ff9800 80%);
+  border: none;
+  border-radius: 50%;
   width: 60px;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(255, 152, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.progress-circle {
-  position: relative;
-  width: 50px; /* slightly larger for visibility */
-  height: 50px;
-  filter: drop-shadow(0 0 6px rgba(255, 152, 0, 0.4));
+.play-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
 }
 
-.circular-chart {
-  transform: rotate(-90deg);
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1; /* keep behind the icon */
-}
-
-.circle {
-  fill: none;
-  stroke: url(#gradientStroke);
-  stroke-width: 3;
-  stroke-linecap: round;
-  transition: stroke-dasharray 0.3s linear;
-}
-
-.pause-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.music-card:hover .pause-icon {
-  transform: translate(-50%, -50%) scale(1.15);
-  color: #e65100; /* subtle hover tint */
-}
-
-/* SVG gradient for progress ring */
-.circular-chart defs linearGradient {
-  stop-color: #ff9800;
+.play-icon {
+  color: white;
+  font-size: 22px;
 }
 
 .music-card.playing {
@@ -83,6 +55,10 @@
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 10px rgba(255, 145, 0, 0.3); }
-  100% { box-shadow: 0 0 20px rgba(255, 80, 0, 0.6); }
+  0% {
+    box-shadow: 0 0 10px rgba(255, 145, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 80, 0, 0.6);
+  }
 }

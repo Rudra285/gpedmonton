@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
 import './AboutUs.css';
-import brochure from '../assets/tri-fold_brochure_pragyakunj.pdf'
 
 const AboutUs = forwardRef<HTMLElement>((props, ref) => {
   return (
@@ -55,7 +54,7 @@ AWGP is a large organization devoted to thought transformation movement, dissemi
             <p>
                 Guided by the ideals of Pt. Shriram Sharma Acharya and Mata Bhagwati Devi Sharma, Pragyakunj embodies the vision of creating a divine civilization rooted in self-development, service, and spiritual awakening — a place where every soul can connect, heal, and contribute to building a better world.
             </p>
-            <a href={brochure} target="_blank" rel="noopener noreferrer" className='brochure'>Download our Brochure</a>
+            <a href="/tri-fold_brochure_pragyakunj.pdf" target="_blank" rel="noopener noreferrer" className='brochure'>Download our Brochure</a>
         </section>
     </main>
   );
