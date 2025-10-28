@@ -65,15 +65,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
           <li><Link to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>About Us</Link></li>
           <li><Link to="/services" className="nav-link" onClick={() => setMenuOpen(false)}>Services</Link></li>
           <li><Link to="/events" className="nav-link" onClick={() => setMenuOpen(false)}>Events</Link></li>
-
-          <li className="nav-item dropdown">
-            <span className="nav-link">Resources <FaChevronDown className="dropdown-arrow" /></span>
-            <ul className="dropdown-menu">
-              <li><Link to="/resources" onClick={() => setMenuOpen(false)}>Audio/Video</Link></li>
-              <li><a href="https://www.awgp.org/en/read" target="_blank" rel="noopener noreferrer">Literature</a></li>
-            </ul>
-          </li>
-
+          <li><Link to="/photos" className="nav-link" onClick={() => setMenuOpen(false)}>Photo Gallery</Link></li>
           <li><Link to="/contact" className="nav-link" onClick={() => setMenuOpen(false)}>Contact</Link></li>
           <li>
             <HashLink
@@ -90,7 +82,8 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
           <li className="nav-item dropdown">
             <span className="nav-link">More <FaChevronDown className="dropdown-arrow" /></span>
             <ul className="dropdown-menu">
-              <li><Link to="/photos" onClick={() => setMenuOpen(false)}>Photo Gallery</Link></li>
+              <li><Link to="/resources" onClick={() => setMenuOpen(false)}>Audio/Video</Link></li>
+              <li><a href="https://www.awgp.org/en/read" target="_blank" rel="noopener noreferrer">Literature</a></li>
               <li><a href="https://www.gptoronto.org/about-3-1" target="_blank" rel="noopener noreferrer">Shantikunj & DSVV</a></li>
               <li><a href="https://www.awgp.org/en/contact_us/global_contacts" target="_blank" rel="noopener noreferrer">AWGP Contacts</a></li>
             </ul>

@@ -21,6 +21,7 @@ const Home = forwardRef<HTMLElement>((props, ref) => {
             <li><Link to="/about" className="button-link">About Us</Link></li>
             <li><Link to="/services" className="button-link">Services</Link></li>
             <li><Link to="/events" className="button-link">Events</Link></li>
+            <li><Link to="/photos" className="button-link">Photo Gallery</Link></li>
             <li><Link to="/resources" className="button-link">Audio/Video</Link></li>
             <li><a href="https://www.awgp.org/en/read" target="_blank" rel="noopener noreferrer" className="button-link">Literature</a></li>
             {/* <li className="resources-group">
@@ -32,7 +33,6 @@ const Home = forwardRef<HTMLElement>((props, ref) => {
                 </a>
               </div>
             </li> */}
-            <li><Link to="/photos" className="button-link">Photo Gallery</Link></li>
             {/* <li><Link to="/contact" className="button-link">Pragyakunj</Link></li> */}
             {/* <li><Link to="/contact" className="button-link">Pooja Prep</Link></li> */}
             <li><a href="https://www.gptoronto.org/about-3-1" target="_blank" className="button-link">
