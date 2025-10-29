@@ -107,7 +107,7 @@ const Intro = forwardRef<HTMLElement>((_, ref) => {
                         <span>Follow Us!</span>
                     </a>
                 </div>
-                <h3>Join Us</h3>
+                <h3>Join us on What's App!</h3>
                 <img src={qrWhatsApp} alt="What's App Join" className='qrWhatsApp'/>
                 <form onSubmit={handleSubscribe} className="subscribe-form">
                     <li className="terms-link"><Link to="/privacy">Terms & Conditions</Link></li>

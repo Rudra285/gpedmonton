@@ -93,4 +93,33 @@
   color: #fff;
 }
 
+@media (max-width: 460px) {
+  .resource-section {
+    height: auto;                     /* ✅ allow natural content height */
+    padding: 4.8rem 1.5rem;             /* ✅ reduce vertical padding */
+  }
 
+  .resource-section h2 {
+    font-size: 1.6rem;                /* ✅ slightly smaller heading */
+    margin-bottom: 0.5rem;
+  }
+
+  .resource-section svg {
+    font-size: 2rem;                /* ✅ smaller icon */
+  }
+
+  .music-list {
+    grid-template-columns: 1fr;       /* ✅ single column */
+    gap: 1rem;
+  }
+
+  .video-archive-list {
+    flex-direction: column;           /* ✅ stack video links */
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .video-archive-link {
+    text-align: center;
+  }
+}
