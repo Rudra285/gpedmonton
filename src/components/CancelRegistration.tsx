@@ -4,7 +4,7 @@ import squareLogo from "../assets/images/logo.png";
 
 const CancelRegistration: React.FC = () => {
   const [status, setStatus] = useState("Processing your cancellation...");
-  const [eventName, setEventName] = useState<string>("");
+  const [_, setEventName] = useState<string>("");
   const { id } = useParams<{ id: string }>();
 
   useEffect(() => {

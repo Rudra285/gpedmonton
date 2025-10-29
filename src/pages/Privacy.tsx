@@ -1,11 +1,11 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import './Privacy.css';
 import { Link } from "react-router-dom";
 import { IoIosGlobe, IoMdMail } from "react-icons/io";
 import { FaMap } from "react-icons/fa6";
 
 
-const Privacy = forwardRef<HTMLElement>((props, ref) => {
+const Privacy = forwardRef<HTMLElement>((_, ref) => {
   return (
     <main className='privacy'>
         <h1>Data Collection, Use, and Privacy Policy</h1>
@@ -84,7 +84,8 @@ const Privacy = forwardRef<HTMLElement>((props, ref) => {
             </div>
         </section>
         <p className="footer-note">
-            © {new Date().getFullYear()} Gayatri Pariwar Edmonton. All rights reserved.
+            © {new Date().getFullYear()} Gayatri Pariwar Edmonton. All rights reserved. <br/>
+            Designed & Developed by Rudra Patel.
         </p>
     </main>
   );

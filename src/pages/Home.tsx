@@ -1,10 +1,12 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import welcome from '../assets/images/slide_1.png';
 import { Link } from 'react-router-dom';
 import { HashLink } from "react-router-hash-link";
+import logo from "../assets/images/logo.png"
+import pragyakunjLogo from "../assets/images/pragyakunj_logo.png"
 import './Home.css';
 
-const Home = forwardRef<HTMLElement>((props, ref) => {
+const Home = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={ref} style={{ backgroundImage: `url(${welcome})` }} className='landing-zone'>
@@ -14,7 +16,11 @@ const Home = forwardRef<HTMLElement>((props, ref) => {
         </div>
         <div id="welcome-text" className="fade-in">
             <h2> Welcome to</h2>
-            <h1> All World Gayatri Pariwar Edmonton</h1>
+            <div className="welcome-brand">
+              <img src={logo} alt='GPE Logo'/>
+              <h1>Gayatri Pariwar Edmonton</h1>
+              <img src={pragyakunjLogo} alt='Pragyakunj Logo'/>
+            </div>
         </div>
         <div className="home-buttons fade-in">
           <ul>

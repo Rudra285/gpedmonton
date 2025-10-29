@@ -1,7 +1,6 @@
 import { IoMdMail } from "react-icons/io";
 import { FaMap, FaPhone } from "react-icons/fa6";
 import React, { useState } from "react";
-import ContactCard from "../components/ContactCard";
 import './Contact.css';
 
 const Contact: React.FC = () => {
@@ -10,24 +9,6 @@ const Contact: React.FC = () => {
         email: "",
         message: "",
     });
-
-    const committeeMembers = [
-        {
-            name: "Prashant Shrivastava",
-            number: "(780) 438-1234",
-            // image: "/images/prashant.jpg", // optional
-        },
-        {
-            name: "Devendra Patel",
-            number: "(780) 461-1197",
-            // image: "/images/devendra.jpg",
-        },
-        {
-            name: "Arun Bhavsar",
-            number: "(780) 466-3837",
-            // image: "/images/arun.jpg",
-        },
-    ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

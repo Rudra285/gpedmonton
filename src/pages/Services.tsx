@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import './Services.css';
 import { HashLink } from "react-router-hash-link";
 import yagya_logo from '../assets/images/yagya_logo.png';
@@ -7,7 +7,7 @@ import katha_logo from '../assets/images/katha_logo.png';
 import griha_logo from '../assets/images/griha_logo.png';
 import vivah_logo from '../assets/images/vivah_logo.png';
 
-const Services = forwardRef<HTMLElement>((props, ref) => {
+const Services = forwardRef<HTMLElement>((_, ref) => {
   return (
     <main className='services-root'>
         <section ref={ref} className='services-intro'>

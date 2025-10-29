@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import Photos from "../components/Photos";
 import "./PhotoGallery.css";
 
@@ -12,7 +12,7 @@ interface PhotoData {
   isArchived?: boolean;
 }
 
-const PhotoGallery = forwardRef<HTMLElement>((props, ref) => {
+const PhotoGallery = forwardRef<HTMLElement>((_, ref) => {
   const [currentPhotos, setCurrentPhotos] = useState<PhotoData[]>([]);
   const [archivePhotos, setArchivePhotos] = useState<PhotoData[]>([]);
   const [loading, setLoading] = useState(true);

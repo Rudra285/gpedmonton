@@ -1,6 +1,6 @@
 import { FaMusic, FaVideo } from "react-icons/fa6";
 import MusicCard from "../components/MusicCard";
-import React, { forwardRef, useEffect, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import "./Resources.css";
 
 interface MediaData {
@@ -12,7 +12,7 @@ interface MediaData {
   driveFileId?: string;
 }
 
-const Resources = forwardRef<HTMLElement>((props, ref) => {
+const Resources = forwardRef<HTMLElement>((_, ref) => {
   const [media, setMedia] = useState<{ music: MediaData[]; videos: MediaData[] }>({
     music: [],
     videos: [],

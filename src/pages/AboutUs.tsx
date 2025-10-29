@@ -1,7 +1,7 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import './AboutUs.css';
 
-const AboutUs = forwardRef<HTMLElement>((props, ref) => {
+const AboutUs = forwardRef<HTMLElement>((_, ref) => {
   return (
     <main className='about-us'>
         <section ref={ref} className='pariwar'>
@@ -44,7 +44,8 @@ AWGP is a large organization devoted to thought transformation movement, dissemi
             </ul>
         </section>
         <section className='pragyakunj'>
-            <h1>Pragyakunj – Centre for Spiritual and Holistic Wellness</h1>
+            <h1>Pragyakunj – Awaken The Light Within<br/>
+            Centre for Spiritual and Holistic Wellness</h1>
             <p>
                 Nestled amidst 56 serene acres in Sherwood Park, Pragyakunj is the spiritual and community centre of All World Gayatri Pariwar, Edmonton. It is envisioned as a sacred space dedicated to nurturing body, mind, and soul through the timeless principles of Gayatri and Yagya.
             </p>

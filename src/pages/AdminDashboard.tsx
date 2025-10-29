@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./AdminDashboard.css";
 import MediaManager from "../admin/MediaManager";
@@ -7,7 +7,6 @@ import PhotoManager from "../admin/PhotoManager";
 import DataManager from "../admin/DataManager";
 
 const AdminDashboard: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<"registrations" | "subscribers">("registrations");
   const navigate = useNavigate();
 
   const handleLogout = () => {

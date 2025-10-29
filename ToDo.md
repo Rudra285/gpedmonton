@@ -1,5 +1,4 @@
 --Pre Launch--
-- Update the page with latest info
 - Figure out Emailing from the site for subscription newsletter and registration recipient emails.
 - Create a registartion form template for each event?
 - Final revision of design

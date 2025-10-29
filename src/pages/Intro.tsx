@@ -238,7 +238,8 @@ const Intro = forwardRef<HTMLElement>((_, ref) => {
                 <li>Submission of the puja request form does not confirm the Puja request. Your information will be reviewed by our team, and a representative from Gayatri Pariwar Edmonton will contact you to confirm the details, date, and availability before finalizing the Puja.</li>
 			</ol>
             <p className="rights">
-                © {new Date().getFullYear()} Gayatri Pariwar Edmonton. All rights reserved.
+                © {new Date().getFullYear()} Gayatri Pariwar Edmonton. All rights reserved. <br/>
+                Designed & Developed by Rudra Patel.
             </p>
             <li className="privacy-link"><Link to="/privacy">Terms of Use & Privacy Policy</Link></li>
         </section>

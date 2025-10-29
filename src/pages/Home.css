@@ -128,3 +128,36 @@
   border-radius: 20px;
   white-space: nowrap;
 }
+
+.welcome-brand {
+  display: flex;
+  flex-direction: row;      /* 🔹 horizontal arrangement */
+  align-items: center;      /* 🔹 vertical centering */
+  justify-content: center;  /* 🔹 center horizontally */
+  gap: 15rem;                /* 🔹 spacing between items */
+  flex-wrap: wrap;          /* 🔹 allows wrapping on smaller screens */
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.welcome-brand img {
+  width: 110px;              /* adjust as needed */
+  height: auto;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+/* 🧭 Responsive tuning for smaller screens */
+@media (max-width: 768px) {
+  .welcome-brand {
+    gap: 3rem;
+  }
+
+  .welcome-brand img {
+    width: 80px;
+  }
+
+  .welcome-brand h1 {
+    font-size: 2rem;
+  }
+}
