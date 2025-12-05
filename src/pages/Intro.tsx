@@ -194,8 +194,6 @@ const Intro = forwardRef<HTMLElement>((_, ref) => {
                     <div className="request-button-wrapper">
                         <button type="submit" className="request-button">Request</button>
                     </div>
-                    <br/>
-                    <br/>
                 </form>
                 <p className="disclaimer-warning">Please review the disclaimer <sup>(#5)</sup></p>
             </div>
@@ -212,14 +210,6 @@ const Intro = forwardRef<HTMLElement>((_, ref) => {
                         <img src={squareLogo} className='square-logo' />
                     </a>
                 </div>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
             </div>
         </section>
         <section className='disclaimer'>

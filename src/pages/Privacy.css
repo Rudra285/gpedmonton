@@ -1,20 +1,21 @@
-/* ====== PAGE LAYOUT ====== */
+/* 🌼 PAGE LAYOUT */
 .privacy {
-  padding: 6rem 3rem;
-  background: linear-gradient(180deg, #FFF9E6 0%, #FFE8B0 40%, #FFD54F 100%);
-  color: #4E342E;
+  padding-block: clamp(2.5rem, 6vw, 6rem);
+  padding-inline: clamp(1rem, 5vw, 3rem);
+  background: linear-gradient(180deg, #fff9e6 0%, #ffe8b0 40%, #ffd54f 100%);
+  color: #4e342e;
   line-height: 1.8;
   border-radius: 20px;
   box-shadow: 0 8px 28px rgba(255, 160, 0, 0.25);
-  max-width: 1100px;
-  margin: auto;
-  margin-top: 7rem;
-  margin-bottom: 3rem;
+  max-width: min(95%, 1100px);
+  margin-inline: auto;
+  margin-block: clamp(3rem, 8vw, 7rem) clamp(2rem, 5vw, 3rem);
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* Soft glow edge for warmth */
+/* 🌞 Soft glow overlay */
 .privacy::before {
   content: "";
   position: absolute;
@@ -23,124 +24,111 @@
   pointer-events: none;
 }
 
-/* ====== HEADINGS ====== */
+/* 🧡 HEADINGS */
 .privacy h1 {
-  color: #BF360C;
-  font-size: 2.4rem;
+  color: #bf360c;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 700;
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
   letter-spacing: 0.5px;
   text-shadow: 0 2px 6px rgba(255, 138, 101, 0.3);
 }
 
 .privacy h2 {
-  color: #C62828;
-  font-size: 1.5rem;
-  margin-top: 2.8rem;
-  margin-bottom: 1rem;
-  border-left: 5px solid #FFB300;
-  padding-left: 1rem;
+  color: #c62828;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  margin-top: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: clamp(0.6rem, 1.5vw, 1rem);
+  border-left: 5px solid #ffb300;
+  padding-left: clamp(0.6rem, 2vw, 1rem);
   font-weight: 600;
   text-transform: capitalize;
 }
 
-/* ====== TEXT ====== */
+/* 📝 TEXT CONTENT */
 .privacy p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  color: #5D4037;
+  margin-bottom: clamp(0.8rem, 2vw, 1rem);
+  font-size: clamp(1rem, 1.6vw, 1.1rem);
+  color: #5d4037;
 }
 
 .privacy ul {
-  margin-left: 2rem;
+  margin-left: clamp(1rem, 3vw, 2rem);
   list-style-type: disc;
 }
 
 .privacy li {
-  margin-bottom: 0.6rem;
+  margin-bottom: clamp(0.4rem, 1vw, 0.6rem);
 }
 
-/* Subtle section background for each block */
+/* 📦 SECTION CONTAINERS */
 .privacy section {
   background: rgba(255, 255, 255, 0.45);
-  padding: 1.5rem 2rem;
+  padding-block: clamp(1rem, 3vw, 1.5rem);
+  padding-inline: clamp(1rem, 3vw, 2rem);
   border-radius: 12px;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
   box-shadow: 0 4px 10px rgba(255, 193, 7, 0.15);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
-
 .privacy section:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 16px rgba(255, 193, 7, 0.25);
 }
 
-/* ====== CONTACT DETAILS ====== */
+/* 📫 CONTACT DETAILS */
 .detail-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.8rem;
-  margin: 0.6rem 0;
-  font-size: 1rem;
+  gap: clamp(0.5rem, 2vw, 0.8rem);
+  margin-block: clamp(0.3rem, 1vw, 0.6rem);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  flex-wrap: wrap;
 }
-
 .detail-item svg {
-  font-size: 1.4rem;
-  color: #E65100;
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  color: #e65100;
+  flex-shrink: 0;
 }
 
-/* ====== LINKS ====== */
+/* 🔗 LINKS */
 .email-link,
 .home-link {
-  color: #E65100;
+  color: #e65100;
   text-decoration: none;
   transition: all 0.3s ease;
   font-weight: 500;
+  word-break: break-word;
 }
-
 .email-link:hover,
 .home-link:hover {
-  color: #BF360C;
+  color: #bf360c;
   text-decoration: underline;
   transform: scale(1.04);
 }
 
-/* ====== FOOTER NOTE ====== */
+/* 🧾 FOOTER NOTE */
 .footer-note {
   text-align: center;
-  margin-top: 4rem;
-  font-size: 1rem;
-  color: #5D4037;
+  margin-top: clamp(2rem, 6vw, 4rem);
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  color: #5d4037;
   opacity: 0.8;
   border-top: 1px solid rgba(191, 54, 12, 0.2);
-  padding-top: 1.5rem;
+  padding-top: clamp(1rem, 3vw, 1.5rem);
   letter-spacing: 0.3px;
 }
 
-/* ====== RESPONSIVE ====== */
-@media (max-width: 850px) {
-  .privacy {
-    padding: 4rem 1.5rem;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  .privacy h1 {
-    font-size: 1.8rem;
-  }
-
-  .privacy h2 {
-    font-size: 1.25rem;
-    padding-left: 0.8rem;
-  }
-
-  .privacy p,
-  .privacy li {
-    font-size: 1rem;
-  }
-
-  .privacy section {
-    padding: 1rem;
+/* ✨ ENTRY ANIMATION */
+.privacy {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

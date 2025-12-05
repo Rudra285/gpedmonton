@@ -1,77 +1,83 @@
-/* ===== ROOT CONTAINER ===== */
+/* 🌞 ROOT CONTAINER */
 .login-root {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: radial-gradient(circle at center, #FFF8E1 0%, #FFE082 40%, #FFB300 100%);
+  min-height: 100vh; /* allows expansion if content grows */
+  padding: clamp(1rem, 4vw, 3rem);
+  background: radial-gradient(circle at center, #fff8e1 0%, #ffe082 40%, #ffb300 100%);
   font-family: 'Poppins', sans-serif;
-  color: #5D4037;
+  color: #5d4037;
+  box-sizing: border-box;
 }
 
-/* ===== LOGIN FORM ===== */
+/* 🧱 LOGIN FORM */
 .login-form {
-  background: linear-gradient(135deg, #FF7043, #FFB300);
-  color: #FFF8E1;
-  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, #ff7043, #ffb300);
+  color: #fff8e1;
+  padding-block: clamp(1.8rem, 4vw, 2.5rem);
+  padding-inline: clamp(1.2rem, 5vw, 2rem);
   border-radius: 20px;
   width: 100%;
-  max-width: 400px;
+  max-width: clamp(320px, 90%, 400px);
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0 8px 24px rgba(255, 152, 0, 0.35);
   animation: fadeIn 0.8s ease forwards;
+  box-sizing: border-box;
 }
 
-/* ===== HEADER ===== */
+/* 🏷️ HEADER */
 .login-form h2 {
-  color: #FFF8E1;
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
+  color: #fff8e1;
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
 }
 
-/* ===== INPUTS ===== */
+/* ✏️ INPUTS */
 .login-form input {
   width: 100%;
-  padding: 0.8rem 1rem;
-  margin-bottom: 1rem;
+  padding: clamp(0.7rem, 2vw, 0.8rem) clamp(0.9rem, 2vw, 1rem);
+  margin-bottom: clamp(0.8rem, 2vw, 1rem);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   background-color: rgba(255, 255, 255, 0.15);
   color: #fff;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .login-form input::placeholder {
-  color: #FFF8E1;
+  color: #fff8e1;
 }
 
 .login-form input:focus {
   outline: none;
   background-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 10px rgba(255, 179, 0, 0.4);
-  border-color: #FFF8E1;
+  border-color: #fff8e1;
 }
 
-/* ===== BUTTON ===== */
+/* 🔘 BUTTON */
 .login-form button {
   width: 100%;
   background: linear-gradient(135deg, red, rgb(255, 119, 70));
-  color: #FFF8E1;
+  color: #fff8e1;
   border: none;
   border-radius: 25px;
-  padding: 0.8rem;
-  font-size: 1rem;
+  padding: clamp(0.6rem, 2vw, 0.8rem);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
   font-weight: 600;
   cursor: pointer;
   text-transform: uppercase;
   transition: all 0.3s ease;
-  margin-top: 0.5rem;
+  margin-top: clamp(0.3rem, 1vw, 0.5rem);
 }
 
 .login-form button:hover {
@@ -80,18 +86,18 @@
   box-shadow: 0 6px 16px rgba(255, 179, 0, 0.4);
 }
 
-/* ===== ERROR MESSAGE ===== */
+/* ⚠️ ERROR MESSAGE */
 .error {
-  color: #FFF3E0;
+  color: #fff3e0;
   background: rgba(198, 40, 40, 0.7);
-  padding: 0.5rem 1rem;
+  padding: clamp(0.4rem, 1.2vw, 0.6rem) clamp(0.8rem, 2vw, 1rem);
   border-radius: 8px;
-  font-size: 0.9rem;
-  margin-top: 1rem;
+  font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+  margin-top: clamp(0.8rem, 2vw, 1rem);
   text-align: center;
 }
 
-/* ===== ANIMATION ===== */
+/* ✨ ANIMATION */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -100,16 +106,5 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 480px) {
-  .login-form {
-    padding: 2rem 1.5rem;
-    width: 85%;
-  }
-  .login-form h2 {
-    font-size: 1.5rem;
   }
 }

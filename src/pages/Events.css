@@ -1,68 +1,98 @@
+/* 🌅 UPCOMING EVENTS SECTION */
 .upcoming-events-section {
-  background: radial-gradient(circle at center, #FFF, #FFE082, #ff7700 100%);
-  color: #5D4037;
+  background: radial-gradient(circle at center, #ffffff 0%, #ffe082 50%, #ff7700 100%);
+  color: #5d4037;
   text-align: center;
-  padding: 4rem 2rem;
+  padding-block: clamp(6rem, 6vw, 4rem);
+  padding-inline: clamp(1rem, 5vw, 3rem);
   min-height: 50vh;
+  box-sizing: border-box;
 }
 
 .upcoming-events-section h1 {
   color: #ff9500;
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  margin-bottom: clamp(1rem, 3vw, 2rem);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: clamp(0.5px, 0.2vw, 1px);
 }
 
-/* Align the event cards nicely */
+/* 🎴 FLEXIBLE EVENT CARD GRID */
 .upcoming-events-section > div {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: clamp(1rem, 3vw, 2rem);
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
 }
 
+/* 🔶 PAST EVENTS SECTION */
 .past-events-section {
-  background: linear-gradient(135deg, #FF7043, #FFB300);
-  color: #FFF8E1;
+  background: linear-gradient(135deg, #ff7043, #ffb300);
+  color: #fff8e1;
   text-align: center;
-  padding: 4rem 2rem;
+  padding-block: clamp(2rem, 6vw, 4rem);
+  padding-inline: clamp(1rem, 5vw, 3rem);
   min-height: 50vh;
+  box-sizing: border-box;
 }
 
 .past-events-section h2 {
-  color: #FFF8E1;
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
+  color: #fff8e1;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: clamp(1rem, 3vw, 2rem);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: clamp(0.5px, 0.2vw, 1px);
 }
 
+/* 🖼️ PAST EVENT POSTER GRID */
 .past-events-posters {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: clamp(0.8rem, 2vw, 1.5rem);
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
 }
 
 .past-event-img {
-  width: 220px;
-  height: 180px;
+  width: clamp(150px, 25vw, 220px);
+  height: clamp(120px, 18vw, 180px);
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .past-event-img:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(255, 179, 0, 0.4);
 }
 
 .past-events-posters h3 {
-  color: #FFFDE7;
+  color: #fffde7;
   margin-top: 0.5rem;
   font-weight: 600;
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+}
+
+/* ✨ SMOOTH APPEAR ANIMATION */
+.upcoming-events-section,
+.past-events-section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+.upcoming-events-section { animation-delay: 0.1s; }
+.past-events-section { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

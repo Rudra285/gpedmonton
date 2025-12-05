@@ -1,78 +1,154 @@
 :root {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* ---------- Base Typography ---------- */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+               'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
   color: rgba(18, 9, 9, 0.87);
   background-color: #ffffff;
-
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* ---------- Global Fluid Scales ---------- */
+  /* padding, margins, and gaps scale smoothly */
+  --gap: clamp(0.5rem, 1vw, 3rem);
+  --section-padding: clamp(1rem, 5vw, 4rem);
+  --radius: clamp(0.5rem, 1vw, 1rem);
+
+  /* Font sizes scale automatically with viewport width */
+  --fs-base: clamp(0.9rem, 1vw + 0.4rem, 1.1rem);
+  --fs-h1: clamp(1.8rem, 4vw + 1rem, 3.2rem);
+  --fs-h2: clamp(1.5rem, 3vw + 0.5rem, 2.4rem);
+  --fs-h3: clamp(1.2rem, 2vw + 0.4rem, 1.8rem);
+
+  color-scheme: light dark;
 }
 
+/* ---------- Universal Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- Global Layout ---------- */
+html, body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  font-size: var(--fs-base);
+  background-color: #ffffff;
+}
+
+/* ---------- Section Defaults ---------- */
+
+section {
+  width: 100%;
+  /* padding-inline: clamp(1rem, 5vw, 6rem); */
+  box-sizing: border-box;
+}
+
+/* ---------- Links ---------- */
 a {
   font-weight: 500;
   color: #646cff;
-  text-decoration: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
+
 a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  /* display: flex; */
-  /* place-items: center; */
-  /* min-width: 320px; */
-  /* min-height: 100vh; */
-}
-
+/* ---------- Headings ---------- */
 h1 {
-  font-size: 3.2em;
+  font-size: var(--fs-h1);
   line-height: 1.1;
 }
 
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+/* ---------- Buttons ---------- */
 button {
-  border-radius: 8px;
+  border-radius: var(--radius);
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  padding: clamp(0.5em, 1vw, 0.8em) clamp(1em, 2vw, 1.5em);
+  font-size: var(--fs-base);
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  color: #fff;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: all 0.3s ease;
 }
 
+button:hover {
+  border-color: #646cff;
+  transform: scale(1.03);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 3px solid #646cff;
+  outline-offset: 2px;
+}
+
+/* ---------- Light/Dark Adaptation ---------- */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+  button {
+    background-color: #f9f9f9;
+    color: #000;
+  }
   a:hover {
     color: #747bff;
   }
-  button {
-    background-color: #f9f9f9;
-  }
 }
 
-* {
-  /* margin: 0; */
-  padding: 0;
+/* ---------- Utility Helpers ---------- */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.container {
+  width: min(90%, 1600px);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 5rem);
+}
+
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* All top-level sections across pages */
+.page-wrapper > section {
+  width: 100%;
+  margin-inline: auto;
   box-sizing: border-box;
-}
-
-html, body {
-  overflow-x: hidden; /* prevent horizontal scroll */
+  max-width: 1600px; /* keeps text comfortably readable */
+  padding-inline: clamp(1rem, 5vw, 6rem);
+  padding-block: clamp(2rem, 5vw, 4rem);
 }

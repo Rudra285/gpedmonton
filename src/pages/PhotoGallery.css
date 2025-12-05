@@ -1,162 +1,159 @@
-/* ========== ROOT WRAPPER ========== */
+/* 🌄 ROOT WRAPPER */
 .photos-root {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 6rem 2rem;
-  background: radial-gradient(circle at top, #FFF8E1 0%, #FFE082 40%, #FFB300 100%);
-  color: #5D4037;
+  padding-block: clamp(2rem, 6vw, 6rem);
+  padding-inline: clamp(1rem, 5vw, 3rem);
+  background: radial-gradient(circle at top, #fff8e1 0%, #ffe082 40%, #ffb300 100%);
+  color: #5d4037;
   text-align: center;
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
-/* Headings */
+/* 🔠 HEADINGS */
 .photos-root h1 {
-  font-size: 2.5rem;
-  color: #C62828;
-  margin-bottom: 1.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: #c62828;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: clamp(0.5px, 0.2vw, 1px);
 }
 
 .photos-root h2 {
-  font-size: 1.8rem;
-  color: #E65100;
-  margin-top: 2rem;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: #e65100;
+  margin-top: clamp(1.2rem, 2vw, 2rem);
   text-transform: capitalize;
-  border-bottom: 3px solid #FFB300;
+  border-bottom: 3px solid #ffb300;
   display: inline-block;
   padding-bottom: 0.3rem;
 }
 
-/* ========== CURRENT PHOTOS ========== */
+/* 📸 CURRENT PHOTOS SECTION */
 .current-photos-section {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  padding: 4rem 0;
+  padding-block: clamp(2rem, 6vw, 4rem);
 }
 
-/* Grouped by year */
+/* 🗓️ GROUPED BY YEAR */
 .photo-years-grid {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 4rem;
+  justify-content: center;
+  gap: clamp(2rem, 5vw, 4rem);
   width: 100%;
-  max-width: 1200px;
+  max-width: 1600px;
+  box-sizing: border-box;
 }
 
-/* Each year container */
+/* 📦 EACH YEAR CONTAINER */
 .photo-years-grid > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 45%;
-  min-width: 300px;
+  flex: 1 1 clamp(280px, 45%, 600px);
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  padding: 2rem;
+  padding: clamp(1.5rem, 4vw, 2rem);
   box-shadow: 0 6px 16px rgba(255, 179, 0, 0.25);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
-
 .photo-years-grid > div:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 24px rgba(255, 152, 0, 0.4);
 }
 
-/* Photo cards per year */
+/* 🖼️ PHOTO CARDS PER YEAR */
 .current-photos-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  gap: clamp(1rem, 3vw, 1.5rem);
+  margin-top: clamp(1rem, 2vw, 1.5rem);
+  width: 100%;
 }
 
-/* ========== PHOTO CARD OVERRIDES (light tweak to Photos.css) ========== */
+/* 📷 INDIVIDUAL PHOTO CARD */
 .photo-card {
-  width: 240px;
+  width: clamp(180px, 25vw, 260px);
   border-radius: 14px;
-  background: linear-gradient(145deg, #FFF8E1, #FFECB3, #FFD54F);
+  background: linear-gradient(145deg, #fff8e1, #ffecb3, #ffd54f);
   box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
-
 .photo-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(255, 152, 0, 0.45);
 }
 
-/* ========== ARCHIVE SECTION ========== */
+/* 🗂️ ARCHIVE SECTION */
 .past-photos-section {
-  margin-top: 5rem;
+  margin-top: clamp(2rem, 6vw, 5rem);
   width: 100%;
   background: rgba(255, 255, 255, 0.25);
   border-radius: 16px;
-  padding: 3rem 2rem;
+  padding-block: clamp(1.5rem, 5vw, 3rem);
+  padding-inline: clamp(1rem, 4vw, 2.5rem);
   box-shadow: 0 4px 16px rgba(255, 152, 0, 0.25);
+  box-sizing: border-box;
 }
 
 .past-photos-section h2 {
-  color: #C62828;
-  margin-bottom: 1.5rem;
+  color: #c62828;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
   text-transform: uppercase;
 }
 
-/* Archive list */
+/* 📚 ARCHIVE LIST */
 .past-photos-section ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.2rem 2rem;
+  gap: clamp(0.8rem, 2vw, 1.5rem) clamp(1rem, 3vw, 2rem);
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 900px;
 }
 
-/* Archive links */
+/* 🔗 ARCHIVE LINKS */
 .past-photo-link {
   text-decoration: none;
-  color: #E65100;
+  color: #e65100;
   font-weight: 600;
   position: relative;
-  padding: 4px 0;
+  padding-block: 4px;
   border-bottom: 2px solid transparent;
   transition: color 0.3s ease, border-color 0.3s ease;
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
 }
-
 .past-photo-link:hover {
   color: orangered;
   border-color: orangered;
 }
-/* ========== RESPONSIVE ========== */
-@media (max-width: 900px) {
-  .photo-years-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-  }
 
-  .photo-years-grid > div {
-    width: 90%;
-  }
+/* ✨ ANIMATION */
+.photos-root,
+.current-photos-section,
+.past-photos-section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+.current-photos-section { animation-delay: 0.2s; }
+.past-photos-section { animation-delay: 0.5s; }
 
-  .photo-card {
-    width: 200px;
-  }
-
-  .photo-card-img {
-    height: 150px;
-  }
-
-  .past-photos-section {
-    padding: 2rem;
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
