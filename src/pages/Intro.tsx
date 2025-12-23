@@ -231,6 +231,7 @@ const Intro = forwardRef<HTMLElement>((_, ref) => {
                 © {new Date().getFullYear()} Gayatri Pariwar Edmonton. All rights reserved. <br/>
                 Designed & Developed by Rudra Patel.
             </p>
+            <li className="diversity-link"><Link to="/diversity">Diversity & Inclusion Policy</Link></li>
             <li className="privacy-link"><Link to="/privacy">Terms of Use & Privacy Policy</Link></li>
         </section>
     </main>

@@ -253,7 +253,7 @@
 }
 
 /* LINKS */
-.privacy-link {
+.privacy-link, .diversity-link {
   list-style: none;
 }
 
@@ -287,4 +287,18 @@
 .privacy-link a:hover {
   color:#fff8e1;
   text-shadow:0 0 8px rgba(255,215,64,.8);
+}
+
+.diversity-link a {
+  display:inline-block;
+  margin-top:clamp(1rem,2vw,2rem);
+  font-size:clamp(0.9rem,1.5vw,1.05rem);
+  font-weight:600;
+  color:#ff7e7e;
+  text-decoration:none;
+  transition:all .3s ease;
+}
+.diversity-link a:hover {
+  color:#ffe1e1;
+  text-shadow:0 0 8px rgba(255, 64, 64, 0.8);
 }

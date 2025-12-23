@@ -96,7 +96,7 @@
   position: absolute;
   text-align: end;
   top: 100%;  /* right below parent */
-  left: 0;
+  left: -18px;
   background: white;
   padding: 0.5rem;
   /* padding-left: 0.1rem; */
@@ -106,7 +106,7 @@
   border-bottom-right-radius: 8px;
   /* box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); */
   list-style: none;
-  /* min-width: 180px; */
+  min-width: auto;
   z-index: 999;
   /* cursor: pointer; */
 }
@@ -174,7 +174,7 @@
   /* Menu slides under navbar */
   .nav-links {
     position: fixed;
-    top: 50px; /* below the navbar height */
+    top: 70px; /* below the navbar height */
     left: 0;
     width: 100%;
     height: calc(100vh - 50px); /* fill rest of screen */

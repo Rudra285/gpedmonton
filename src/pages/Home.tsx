@@ -26,6 +26,7 @@ const Home = forwardRef<HTMLElement>((_, ref) => {
           <ul>
             <li><Link to="/about" className="button-link">About Us</Link></li>
             <li><Link to="/services" className="button-link">Services</Link></li>
+            {/* <li><Link to="/diversity" className="button-link">Diversity & Inclusion</Link></li> */}
             <li><Link to="/events" className="button-link">Events</Link></li>
             <li><Link to="/photos" className="button-link">Photo Gallery</Link></li>
             <li><Link to="/resources" className="button-link">Audio/Video</Link></li>
