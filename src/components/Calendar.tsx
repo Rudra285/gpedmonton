@@ -54,7 +54,7 @@ const Calendar: React.FC = () => {
           events={events.map((e) => ({
             id: e._id,
             title: e.name,
-            start: new Date(e.timestamp), // preferred over `date`
+            start: formatEdmontonDate(e.timestamp), // preferred over `date`
             extendedProps: {
               desc: e.desc,
               date: formatEdmontonDate(e.timestamp),

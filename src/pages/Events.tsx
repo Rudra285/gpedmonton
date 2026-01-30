@@ -31,7 +31,6 @@ const Events: React.FC = () => {
               <EventCard
                 key={event._id}
                 name={event.name}
-                date={event.date}
                 image={`https://gpedmonton-backend.onrender.com/api/proxy/image/${event.driveFileId}`}
                 desc={event.desc}
                 timestamp={event.timestamp}

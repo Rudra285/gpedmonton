@@ -63,23 +63,23 @@ const EventRegistrationForm: React.FC = () => {
 
       const registrationId = result.registration._id;
 
-      const mailRes = await fetch("https://gpedmonton-backend.onrender.com/api/mail/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: data.email,
-          date: state?.date,
-          name: `${data.firstName} ${data.lastName}`,
-          eventName: state?.eventName,
-          attendees: data.attendees,
-          phoneNumber: data.phone,
-          specialRequests: data.specialRequests,
-          registrationId,
-        }),
-      });
+      // const mailRes = await fetch("https://gpedmonton-backend.onrender.com/api/mail/register", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({
+      //     email: data.email,
+      //     date: state?.date,
+      //     name: `${data.firstName} ${data.lastName}`,
+      //     eventName: state?.eventName,
+      //     attendees: data.attendees,
+      //     phoneNumber: data.phone,
+      //     specialRequests: data.specialRequests,
+      //     registrationId,
+      //   }),
+      // });
 
-      if (!mailRes.ok) throw new Error("Failed to send confirmation email.");
-      console.log("Confirmation email sent.");
+      // if (!mailRes.ok) throw new Error("Failed to send confirmation email.");
+      // console.log("Confirmation email sent.");
 
       alert(`Registration successful for ${eventName}!`);
 
