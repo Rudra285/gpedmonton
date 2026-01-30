@@ -4,7 +4,6 @@ import "./EventManager.css";
 interface UpcomingEvent {
   _id?: string;
   name: string;
-  date: string;
   desc: string;
   imageUrl?: string;
   timestamp?: number;
@@ -34,6 +33,23 @@ const EventManager: React.FC = () => {
 
   const [newPast, setNewPast] = useState({ title: "" });
   const [imageFile, setImageFile] = useState<File | null>(null);
+
+  const TZ = "America/Edmonton";
+
+  const formatEdmontonDateTime = (ts?: number) => {
+    if (!ts) return "";
+    return new Date(ts).toLocaleString("en-CA", {
+      timeZone: TZ,
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    });
+  };
+
 
   // ✅ Load events on mount
   useEffect(() => {
@@ -231,7 +247,7 @@ const EventManager: React.FC = () => {
             />
             <div>
               <h3>{"name" in event ? event.name : event.title}</h3>
-              {"date" in event && <p>{event.date}</p>}
+              {"timestamp" in event && <p>{formatEdmontonDateTime(event.timestamp)}</p>}
               <button onClick={() => handleDelete(event._id)}>Delete</button>
             </div>
           </div>

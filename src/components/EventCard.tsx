@@ -5,20 +5,34 @@ import "./EventCard.css";
 interface EventCardProps {
   image: string;
   name: string;
-  date: string;
   desc: string;
   timestamp: number;
 }
 
-const EventCard: React.FC<EventCardProps> = ({ image, name, date, desc, timestamp }) => {
+const EventCard: React.FC<EventCardProps> = ({ image, name, desc, timestamp }) => {
   const now = Date.now();
   const eventEnded = now > timestamp;
+
+  const TZ = "America/Edmonton";
+
+  const formatEdmontonDateTime = (ts: number) =>
+    new Date(ts).toLocaleString("en-CA", {
+      timeZone: TZ,
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    });
+
 
   return (
     <div className={`event-card ${eventEnded ? "event-ended" : ""}`}>
       <img src={image} alt={name} className="event-image" />
       <h3>{name}</h3>
-      <p>{date}</p>
+      <p>{formatEdmontonDateTime(timestamp)}</p>
 
       {eventEnded ? (
         <button className="event-ended-btn" disabled>
@@ -27,7 +41,7 @@ const EventCard: React.FC<EventCardProps> = ({ image, name, date, desc, timestam
       ) : (
         <Link
           to={`/events/register/${encodeURIComponent(name)}`}
-          state={{ eventName: name, desc, date }}
+          state={{ eventName: name, desc, date: formatEdmontonDateTime(timestamp) }}
           className="register-link"
         >
           Details

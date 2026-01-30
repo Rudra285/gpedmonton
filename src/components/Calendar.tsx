@@ -16,6 +16,23 @@ const Calendar: React.FC = () => {
   const [events, setEvents] = useState<EventData[]>([]);
   const navigate = useNavigate();
 
+  const TZ = "America/Edmonton";
+
+  const formatEdmontonDate = (ts: number) =>
+    new Date(ts).toLocaleDateString("en-CA", { timeZone: TZ });
+
+  const formatEdmontonDateTime = (ts: number) =>
+    new Date(ts).toLocaleString("en-CA", {
+      timeZone: TZ,
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    });
+
   useEffect(() => {
     fetch("https://gpedmonton-backend.onrender.com/api/events/upcoming")
       .then((res) => res.json())
@@ -30,6 +47,7 @@ const Calendar: React.FC = () => {
         <FullCalendar
           plugins={[dayGridPlugin]}
           initialView="dayGridMonth"
+          timeZone="America/Edmonton"
           height="auto"
           contentHeight="auto"
           aspectRatio={1.6}        // ✅ ensures full month width
@@ -39,7 +57,7 @@ const Calendar: React.FC = () => {
             start: new Date(e.timestamp), // preferred over `date`
             extendedProps: {
               desc: e.desc,
-              date: new Date(e.timestamp).toLocaleDateString(),
+              date: formatEdmontonDate(e.timestamp),
             },
           }))}
           eventColor="#ff7b00"
@@ -49,15 +67,7 @@ const Calendar: React.FC = () => {
                 state: {
                   eventName: info.event.title,
                   desc: info.event.extendedProps.desc,
-                  date: new Date(info.event.start!).toLocaleString([], {
-                    weekday: "long",
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                    hour: "numeric",
-                    minute: "2-digit",
-                    hour12: true,
-                  })
+                  date: formatEdmontonDateTime(info.event.start!.getTime()),
                 },
               });
           }}
@@ -78,20 +88,12 @@ const Calendar: React.FC = () => {
                       state: {
                         eventName: e.name,
                         desc: e.desc,
-                        date: new Date(e.timestamp).toLocaleString([], {
-                          weekday: "long",
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                          hour: "numeric",
-                          minute: "2-digit",
-                          hour12: true,
-                        })
+                        date: formatEdmontonDateTime(e.timestamp)
                       },
                     });
                   }}
                 >
-                  {e.name} — {new Date(e.timestamp).toLocaleDateString()}
+                  {e.name} — {formatEdmontonDate(e.timestamp)}
                   <FaArrowRight className="arrow-icon" />
                 </a>
               </li>
