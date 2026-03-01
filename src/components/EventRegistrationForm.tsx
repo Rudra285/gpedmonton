@@ -61,7 +61,7 @@ const EventRegistrationForm: React.FC = () => {
       const result = await saveRes.json();
       console.log("Registration saved:", result);
 
-      const registrationId = result.registration._id;
+      // const registrationId = result.registration._id;
 
       // const mailRes = await fetch("https://gpedmonton-backend.onrender.com/api/mail/register", {
       //   method: "POST",
