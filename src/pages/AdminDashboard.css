@@ -1,4 +1,4 @@
-/* 🌞 ROOT DASHBOARD */
+/* ROOT DASHBOARD */
 .admin-dashboard {
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
   box-sizing: border-box;
 }
 
-/* 🧭 PAGE TITLE */
+/* PAGE TITLE */
 .admin-dashboard h1 {
   text-align: center;
   font-size: clamp(1.6rem, 3vw, 2rem);
@@ -22,7 +22,7 @@
   margin-bottom: clamp(0.5rem, 1vw, 1rem);
 }
 
-/* 🧱 SECTION BOXES */
+/* SECTION BOXES */
 .dashboard-section {
   background: linear-gradient(135deg, #ff7043, #ffb300);
   border-radius: 16px;
@@ -47,7 +47,7 @@
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
 }
 
-/* 🪶 TAB HEADER (for sub-managers) */
+/* TAB HEADER (for sub-managers) */
 .tab-header {
   display: flex;
   justify-content: center;
@@ -77,13 +77,13 @@
   color: #fff8e1;
 }
 
-/* 🧾 TAB CONTENT */
+/* TAB CONTENT */
 .tab-content {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding-top: clamp(0.6rem, 2vw, 1rem);
 }
 
-/* 🚪 LOGOUT BUTTON */
+/* LOGOUT BUTTON */
 .logout-btn {
   background: linear-gradient(135deg, #c62828, #f4511e);
   color: #fff8e1;
@@ -107,14 +107,14 @@
   box-shadow: 0 6px 16px rgba(255, 152, 0, 0.45);
 }
 
-/* ✨ BUTTON FOCUS STATE CLEANUP */
+/* BUTTON FOCUS STATE CLEANUP */
 button:focus,
 button:active {
   outline: none;
   box-shadow: none;
 }
 
-/* ⚡ ENTRANCE ANIMATION */
+/* ENTRANCE ANIMATION */
 .admin-dashboard {
   opacity: 0;
   transform: translateY(20px);
