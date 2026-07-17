@@ -1,4 +1,4 @@
-/* 🌍 GLOBAL LAYOUT */
+/* GLOBAL LAYOUT */
 .about-us {
   color: #3e2723;
   overflow-x: hidden;
@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 
-/* ✨ Shared base styling for all sections */
+/* Shared base styling for all sections */
 .about-us section {
   display: flex;
   flex-direction: column;
@@ -45,7 +45,7 @@
   }
 }
 
-/* 🔠 TYPOGRAPHY */
+/* TYPOGRAPHY */
 .about-us h1 {
   color: #ff8c00;
   font-size: clamp(1.5rem, 3vw + 0.5rem, 2.4rem);
@@ -74,7 +74,7 @@
   margin-bottom: clamp(0.8rem, 2vw, 1rem);
 }
 
-/* 📜 LISTS */
+/* LISTS */
 .about-us ul {
   max-width: min(90%, 65ch);
   text-align: left;
@@ -92,7 +92,7 @@
   color: #5d4037;
 }
 
-/* 🔆 Decorative sun bullet */
+/* Decorative sun bullet */
 .about-us li::before {
   content: "☀";
   position: absolute;
@@ -106,7 +106,7 @@
   color: #d84315;
 }
 
-/* 📘 BROCHURE LINK */
+/* BROCHURE LINK */
 .brochure {
   display: inline-block;
   margin-top: clamp(0.4rem, 1vw, 0.6rem);
@@ -122,7 +122,7 @@
   border-color: #ffb300;
 }
 
-/* 🌠 ANIMATIONS */
+/* ANIMATIONS */
 .about-us section:nth-child(1) { animation-delay: 0.1s; }
 .about-us section:nth-child(2) { animation-delay: 0.3s; }
 .about-us section:nth-child(3) { animation-delay: 0.5s; }
