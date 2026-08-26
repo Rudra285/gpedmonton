@@ -30,7 +30,7 @@ const PhotoGallery = forwardRef<HTMLElement>((_, ref) => {
 
   if (loading) return <p>Loading photos...</p>;
 
-  // 🧩 Group current photos by year (based on `date`)
+  // Group current photos by year (based on `date`)
   const groupedByYear = currentPhotos.reduce((acc, photo) => {
     let year = "Unknown";
     if (photo.date) {
@@ -42,7 +42,7 @@ const PhotoGallery = forwardRef<HTMLElement>((_, ref) => {
     return acc;
   }, {} as Record<string, PhotoData[]>);
 
-  // 🧠 Sort years descending (e.g., 2025, 2024)
+  // Sort years descending (e.g., 2025, 2024)
   const sortedYears = Object.keys(groupedByYear)
     .map(Number)
     .sort((a, b) => b - a);
@@ -53,7 +53,7 @@ const PhotoGallery = forwardRef<HTMLElement>((_, ref) => {
         <h1>Photo Gallery</h1>
       </div>
 
-      {/* 🟠 Current Photos Section */}
+      {/* Current Photos Section */}
       <h2>Current Photos</h2>
       <section ref={ref} className="current-photos-section">
         <div className="photo-years-grid">
@@ -76,7 +76,7 @@ const PhotoGallery = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </section>
 
-      {/* 🟣 Archive Section */}
+      {/* Archive Section */}
       <section ref={ref} className="past-photos-section">
         <h2>Photo Archive</h2>
         {archivePhotos.length > 0 ? (
