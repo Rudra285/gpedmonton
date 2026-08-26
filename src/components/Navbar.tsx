@@ -16,10 +16,10 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.innerWidth <= 1250) {
-        // 📱 Mobile: always visible
+        // Mobile: always visible
         setScrolled(menuOpen);
       } else {
-        // 💻 Desktop: only visible after scroll
+        // Desktop: only visible after scroll
         setScrolled(window.scrollY > 50);
       }
     };
