@@ -42,7 +42,7 @@ const Calendar: React.FC = () => {
 
   return (
     <div className="calendar-wrapper">
-      {/* ✅ Full Calendar */}
+      {/* Full Calendar */}
       <div className="calendar-container">
         <FullCalendar
           plugins={[dayGridPlugin]}
@@ -50,7 +50,7 @@ const Calendar: React.FC = () => {
           timeZone="America/Edmonton"
           height="auto"
           contentHeight="auto"
-          aspectRatio={1.6}        // ✅ ensures full month width
+          aspectRatio={1.6}        // ensures full month width
           events={events.map((e) => ({
             id: e._id,
             title: e.name,
@@ -73,7 +73,7 @@ const Calendar: React.FC = () => {
           }}
         />
       </div>
-      {/* ✅ Event List Sidebar */}
+      {/* Event List Sidebar */}
       <div className="calendar-side">
         <h3>Registration for upcoming Events</h3>
         {events.length > 0 ? (
