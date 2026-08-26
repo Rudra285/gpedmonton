@@ -23,7 +23,7 @@ const EventManager: React.FC = () => {
   const [upcomingEvents, setUpcoming] = useState<UpcomingEvent[]>([]);
   const [pastEvents, setPast] = useState<PastEvent[]>([]);
 
-  // ✅ Form states
+  // Form states
   const [newUpcoming, setNewUpcoming] = useState({
     name: "",
     eventDate: "",
@@ -51,7 +51,7 @@ const EventManager: React.FC = () => {
   };
 
 
-  // ✅ Load events on mount
+  // Load events on mount
   useEffect(() => {
     Promise.all([
       fetch("https://gpedmonton-backend.onrender.com/api/events/upcoming").then((r) => r.json()),
@@ -64,7 +64,7 @@ const EventManager: React.FC = () => {
       .catch((err) => console.error("Error loading events:", err));
   }, []);
 
-  // ✅ Handle text and date/time inputs
+  // Handle text and date/time inputs
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -73,12 +73,12 @@ const EventManager: React.FC = () => {
     else setNewPast((prev) => ({ ...prev, [name]: value }));
   };
 
-  // ✅ Handle image upload
+  // Handle image upload
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) setImageFile(e.target.files[0]);
   };
 
-  // ✅ Handle form submission
+  // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!imageFile) return alert("Please upload an image.");
@@ -98,7 +98,7 @@ const EventManager: React.FC = () => {
 
       const now = Date.now();
 
-      // ✅ Decide target collection based on time
+      // Decide target collection based on time
       const isPast = timestamp < now;
 
       if (isPast) {
@@ -126,7 +126,7 @@ const EventManager: React.FC = () => {
         setNewUpcoming({ name: "", eventDate: "", eventTime: "", desc: "" });
         setImageFile(null);
       } catch (err) {
-        console.error("❌ Upload failed:", err);
+        console.error("Upload failed:", err);
         alert("Failed to upload event.");
       }
     } else {
@@ -143,14 +143,14 @@ const EventManager: React.FC = () => {
         setNewPast({ title: "" });
         setImageFile(null);
       } catch (err) {
-        console.error("❌ Upload failed:", err);
+        console.error("Upload failed:", err);
         alert("Failed to upload event.");
       }
     }
   };
 
 
-  // ✅ Delete event
+  // Delete event
   const handleDelete = async (id?: string) => {
     if (!id) return;
     const endpoint =
