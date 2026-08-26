@@ -1,4 +1,4 @@
-/* 🌼 PAGE LAYOUT */
+/* PAGE LAYOUT */
 .privacy {
   padding-block: clamp(2.5rem, 6vw, 6rem);
   padding-inline: clamp(1rem, 5vw, 3rem);
@@ -15,7 +15,7 @@
   box-sizing: border-box;
 }
 
-/* 🌞 Soft glow overlay */
+/* Soft glow overlay */
 .privacy::before {
   content: "";
   position: absolute;
@@ -24,7 +24,7 @@
   pointer-events: none;
 }
 
-/* 🧡 HEADINGS */
+/* HEADINGS */
 .privacy h1 {
   color: #bf360c;
   font-size: clamp(1.8rem, 4vw, 2.4rem);
@@ -46,7 +46,7 @@
   text-transform: capitalize;
 }
 
-/* 📝 TEXT CONTENT */
+/* TEXT CONTENT */
 .privacy p {
   margin-bottom: clamp(0.8rem, 2vw, 1rem);
   font-size: clamp(1rem, 1.6vw, 1.1rem);
@@ -62,7 +62,7 @@
   margin-bottom: clamp(0.4rem, 1vw, 0.6rem);
 }
 
-/* 📦 SECTION CONTAINERS */
+/* SECTION CONTAINERS */
 .privacy section {
   background: rgba(255, 255, 255, 0.45);
   padding-block: clamp(1rem, 3vw, 1.5rem);
@@ -77,7 +77,7 @@
   box-shadow: 0 8px 16px rgba(255, 193, 7, 0.25);
 }
 
-/* 📫 CONTACT DETAILS */
+/* CONTACT DETAILS */
 .detail-item {
   display: flex;
   align-items: flex-start;
@@ -92,7 +92,7 @@
   flex-shrink: 0;
 }
 
-/* 🔗 LINKS */
+/* LINKS */
 .email-link,
 .home-link {
   color: #e65100;
@@ -108,7 +108,7 @@
   transform: scale(1.04);
 }
 
-/* 🧾 FOOTER NOTE */
+/* FOOTER NOTE */
 .footer-note {
   text-align: center;
   margin-top: clamp(2rem, 6vw, 4rem);
@@ -120,7 +120,7 @@
   letter-spacing: 0.3px;
 }
 
-/* ✨ ENTRY ANIMATION */
+/* ENTRY ANIMATION */
 .privacy {
   opacity: 0;
   transform: translateY(20px);
