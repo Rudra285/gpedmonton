@@ -19,7 +19,7 @@ const MediaManager: React.FC = () => {
   const [newMedia, setNewMedia] = useState({ title: "", link: "" });
   const [file, setFile] = useState<File | null>(null);
 
-  // 🧩 Fetch music + videos on mount
+  // Fetch music + videos on mount
   useEffect(() => {
     fetch("https://gpedmonton-backend.onrender.com/api/media")
       .then((res) => res.json())
@@ -36,7 +36,7 @@ const MediaManager: React.FC = () => {
     if (e.target.files && e.target.files[0]) setFile(e.target.files[0]);
   };
 
-  /** ✅ Upload media depending on tab */
+  /** Upload media depending on tab */
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -81,7 +81,7 @@ const MediaManager: React.FC = () => {
     }
   };
 
-  /** 🗑 Delete a media item */
+  /** Delete a media item */
   const handleDelete = async (id?: string, type?: "music" | "video") => {
     if (!id || !type) return;
     if (!window.confirm("Are you sure you want to delete this item?")) return;
