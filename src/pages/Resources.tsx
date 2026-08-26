@@ -27,7 +27,7 @@ const Resources = forwardRef<HTMLElement>((_, ref) => {
 
   return (
     <main className="resources-root">
-      {/* 🎵 MUSIC SECTION */}
+      {/* MUSIC SECTION */}
       <section className="resource-section">
         <FaMusic />
         <h2>Music / Mantra Recordings</h2>
@@ -46,7 +46,7 @@ const Resources = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </section>
 
-      {/* 🎬 VIDEO SECTION */}
+      {/* VIDEO SECTION */}
       <section className="resource-section" ref={ref}>
         <FaVideo />
         <h2>Videos</h2>
