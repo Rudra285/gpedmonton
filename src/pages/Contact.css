@@ -1,4 +1,4 @@
-/* 🌞 CONTACT PAGE LAYOUT */
+/* CONTACT PAGE LAYOUT */
 .contact-section {
   display: flex;
   flex-wrap: wrap;
@@ -16,7 +16,7 @@
   box-sizing: border-box;
 }
 
-/* 🧭 SHARED BOX STYLE */
+/* SHARED BOX STYLE */
 .contact-details-container,
 .contact-form-container {
   flex: 1 1 clamp(320px, 45%, 500px);
@@ -32,7 +32,7 @@
   box-shadow: 0 6px 16px rgba(255, 179, 0, 0.4);
 }
 
-/* 🧡 HEADINGS */
+/* HEADINGS */
 .contact-details-container h2,
 .contact-form h2 {
   color: orangered;
@@ -42,7 +42,7 @@
   text-align: center;
 }
 
-/* 📍 CONTACT DETAILS */
+/* CONTACT DETAILS */
 .detail-item {
   display: flex;
   align-items: flex-start;
@@ -58,7 +58,7 @@
   flex-shrink: 0;
 }
 
-/* 🔗 EMAIL LINKS */
+/* EMAIL LINKS */
 .email-link {
   color: #e65100;
   text-decoration: none;
@@ -71,7 +71,7 @@
   transform: scale(1.05);
 }
 
-/* 📨 CONTACT FORM */
+/* CONTACT FORM */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -86,7 +86,7 @@
   gap: clamp(0.8rem, 2vw, 1rem);
 }
 
-/* ✏️ INPUTS + TEXTAREA */
+/* INPUTS + TEXTAREA */
 .textbox {
   width: 100%;
   padding: clamp(0.6rem, 2vw, 0.75rem) clamp(0.8rem, 2vw, 1rem);
@@ -110,7 +110,7 @@
   height: clamp(120px, 25vw, 180px);
 }
 
-/* 🔘 SUBMIT BUTTON */
+/* SUBMIT BUTTON */
 .submit-button-wrapper {
   display: flex;
   justify-content: center;
@@ -133,7 +133,7 @@
   box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
 }
 
-/* ✨ APPEAR ANIMATION */
+/* APPEAR ANIMATION */
 .contact-section {
   opacity: 0;
   transform: translateY(20px);
