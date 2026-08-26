@@ -1,4 +1,4 @@
-/* 🌅 HERO SECTION */
+/* HERO SECTION */
 .landing-zone {
   background-size: cover;
   background-position: center;
@@ -16,7 +16,7 @@
   overflow: hidden;
 }
 
-/* 🕉️ MANTRA TEXT */
+/* MANTRA TEXT */
 #mantra {
   padding: clamp(0.5rem, 2vw, 0);
   max-width: min(90%, 1200px);
@@ -30,7 +30,7 @@
   margin-bottom: 0.3em;
 }
 
-/* 🙏 WELCOME SECTION */
+/* WELCOME SECTION */
 #welcome-text {
   text-align: center;
   margin-top: clamp(1rem, 3vw, 1rem);
@@ -41,7 +41,7 @@
   margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
 }
 
-/* 🪔 BRAND LOGO + TITLE */
+/* BRAND LOGO + TITLE */
 .welcome-brand {
   display: flex;
   flex-wrap: wrap;
@@ -65,7 +65,7 @@
   margin: 0;
 }
 
-/* 🎬 BUTTON GROUP */
+/* BUTTON GROUP */
 .home-buttons {
   display: flex;
   justify-content: center;
@@ -82,7 +82,7 @@
   padding: 0;
 }
 
-/* 🔘 BUTTON STYLE */
+/* BUTTON STYLE */
 .button-link {
   background-color: rgba(255, 255, 255, 0.15);
   color: #fff;
@@ -103,7 +103,7 @@
   color: #fff;
 }
 
-/* 🧩 SUB-BUTTON DROPDOWN */
+/* SUB-BUTTON DROPDOWN */
 .sub-buttons {
   display: none;
   flex-direction: column;
@@ -132,7 +132,7 @@
   to { opacity: 1; transform: translate(-50%, 0); }
 }
 
-/* ✨ SMALL BUTTON VARIANT */
+/* SMALL BUTTON VARIANT */
 .button-link.small {
   padding: clamp(0.3rem, 1vw, 0.5rem) clamp(0.8rem, 2vw, 1.2rem);
   font-size: clamp(0.7rem, 1vw, 0.9rem);
@@ -140,7 +140,7 @@
   white-space: nowrap;
 }
 
-/* 🌤️ FADE-IN ANIMATION */
+/* FADE-IN ANIMATION */
 @keyframes fadeIn {
   from {
     opacity: 0;
