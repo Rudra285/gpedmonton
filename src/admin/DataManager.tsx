@@ -25,7 +25,7 @@ const DataManager: React.FC = () => {
   const [subscribers, setSubscribers] = useState<Subscribe[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // 🔹 Load data for both tabs
+  // Load data for both tabs
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -45,14 +45,14 @@ const DataManager: React.FC = () => {
     fetchData();
   }, []);
 
-  // 🔹 Group registrations by event name
+  // Group registrations by event name
   const grouped = registrations.reduce((acc: Record<string, Registration[]>, reg) => {
     if (!acc[reg.eventName]) acc[reg.eventName] = [];
     acc[reg.eventName].push(reg);
     return acc;
   }, {});
 
-  // ✅ Export registrations to CSV
+  // Export registrations to CSV
   const exportRegistrations = (eventName: string, regs: Registration[]) => {
     const headers = [
       "First Name",
@@ -84,7 +84,7 @@ const DataManager: React.FC = () => {
     document.body.removeChild(link);
   };
 
-  // ✅ Export subscribers to CSV
+  // Export subscribers to CSV
   const exportSubscribers = () => {
     const headers = ["Email"];
     const rows = subscribers.map((s) => [s.email]);
