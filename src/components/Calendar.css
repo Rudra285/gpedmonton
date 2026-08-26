@@ -10,7 +10,7 @@
 }
 
 .calendar-container {
-  flex: 1 1 60%;       /* ✅ give flexible width */
+  flex: 1 1 60%;       /* give flexible width */
   min-width: 500px;    /* was 600px — reduced to fit weekends */
   max-width: 900px;    /* cap width so it doesn’t stretch too far */
   background: linear-gradient(135deg, #FFFDE7, #FFF3E0);
@@ -18,7 +18,7 @@
   padding: 1.5rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  overflow: hidden;    /* ✅ ensures weekends aren’t cut off visually */
+  overflow: hidden;    /* ensures weekends aren’t cut off visually */
 }
 
 @media (max-width: 750px) {
@@ -36,7 +36,7 @@
     margin: 0 auto;
   }
 
-  /* ✅ Force the grid to always fit the screen width */
+  /* Force the grid to always fit the screen width */
   .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr); /* evenly divide width */
@@ -44,7 +44,7 @@
     gap: 2px;
   }
 
-  /* ✅ Shrink cells and text */
+  /* Shrink cells and text */
   .calendar-cell {
     font-size: 0.7rem; /* smaller text */
     padding: 0.3rem 0.1rem; /* tighter spacing */
@@ -84,12 +84,12 @@
     width: 100%;
   }
 
-  /* ✅ Hide the calendar entirely */
+  /* Hide the calendar entirely */
   .calendar-container {
     display: none !important;
   }
 
-  /* ✅ Show only the side links */
+  /* Show only the side links */
   .calendar-side {
     width: 90%;
     max-width: 360px;
