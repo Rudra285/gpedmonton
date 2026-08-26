@@ -18,25 +18,25 @@ const AdminDashboard: React.FC = () => {
     <main className="admin-dashboard">
       <h1>Admin Dashboard</h1>
 
-      {/* 1️⃣ Media Section */}
+      {/* Media Section */}
       <section className="dashboard-section">
         <h2>Media Manager</h2>
         <MediaManager />
       </section>
 
-      {/* 2️⃣ Event Section */}
+      {/* Event Section */}
       <section className="dashboard-section">
         <h2>Event Manager</h2>
         <EventManager />
       </section>
 
-      {/* 3️⃣ Photo Gallery */}
+      {/* Photo Gallery */}
       <section className="dashboard-section">
         <h2>Photo Manager</h2>
         <PhotoManager />
       </section>
 
-      {/* 4️⃣ Registrations & Subscribers Tabs */}
+      {/* Registrations & Subscribers Tabs */}
       <section className="dashboard-section">
         <h2>Registrations & Subscribers</h2>
         <DataManager />
