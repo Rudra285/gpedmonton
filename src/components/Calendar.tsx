@@ -83,7 +83,7 @@ const Calendar: React.FC = () => {
                 <a
                   href={`/events/register/${encodeURIComponent(e.name)}`}
                   onClick={(ev) => {
-                    ev.preventDefault(); // ⛔ stop full-page reload
+                    ev.preventDefault(); // stop full-page reload
                     navigate(`/events/register/${encodeURIComponent(e.name)}`, {
                       state: {
                         eventName: e.name,
