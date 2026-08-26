@@ -1,4 +1,4 @@
-/* 🌞 ROOT WRAPPER */
+/* ROOT WRAPPER */
 .services-root {
   background-color: #fffdf5;
   color: #3e2723;
@@ -6,7 +6,7 @@
   overflow-x: hidden;
 }
 
-/* 📦 SECTION LAYOUT */
+/* SECTION LAYOUT */
 .services-root section {
   padding-block: clamp(7rem, 6vw, 4rem);
   padding-inline: clamp(1rem, 5vw, 3rem);
@@ -24,7 +24,7 @@
   background: linear-gradient(135deg, #fff3e0, #ffe0b2);
 }
 
-/* 🔆 SERVICE LOGOS */
+/* SERVICE LOGOS */
 .service-logo {
   width: clamp(70px, 8vw, 110px);
   height: auto;
@@ -34,7 +34,7 @@
 }
 .service-logo:hover { transform: scale(1.08); }
 
-/* 🧭 HEADINGS */
+/* HEADINGS */
 .services-root h1,
 .services-root h2 {
   color: #ff6f00;
@@ -50,7 +50,7 @@
   margin-bottom: clamp(0.5rem, 1.5vw, 0.75rem);
 }
 
-/* 📝 PARAGRAPHS */
+/* PARAGRAPHS */
 .services-root p {
   max-width: min(90%, 70ch);
   margin-inline: auto;
@@ -60,7 +60,7 @@
   color: #4e342e;
 }
 
-/* 📋 LISTS */
+/* LISTS */
 .services-root ul {
   list-style: none;
   padding: 0;
@@ -79,7 +79,7 @@
   color: orange;
 }
 
-/* 🕉️ INTRO LINK LIST */
+/* INTRO LINK LIST */
 .services-intro ul {
   display: flex;
   flex-wrap: wrap;
@@ -106,7 +106,7 @@
   border-color: #ffb300;
 }
 
-/* 📄 HAVAN LIST DOWNLOAD LINKS */
+/* HAVAN LIST DOWNLOAD LINKS */
 .havan-list {
   margin-top: clamp(1rem, 3vw, 1.5rem);
 }
@@ -125,7 +125,7 @@
   border-color: #ffb300;
 }
 
-/* 🙏 REQUEST BUTTON */
+/* REQUEST BUTTON */
 .request {
   list-style: none;
   margin-top: clamp(1rem, 3vw, 1.5rem);
@@ -146,7 +146,7 @@
   background: linear-gradient(135deg, #ffa000, #e65100);
 }
 
-/* ✨ SMOOTH FADE-IN (optional aesthetic) */
+/* SMOOTH FADE-IN (optional aesthetic) */
 .services-root section {
   opacity: 0;
   transform: translateY(20px);
