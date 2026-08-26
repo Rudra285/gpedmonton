@@ -1,4 +1,4 @@
-/* 🌄 ROOT WRAPPER */
+/* ROOT WRAPPER */
 .photos-root {
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@
   box-sizing: border-box;
 }
 
-/* 🔠 HEADINGS */
+/* HEADINGS */
 .photos-root h1 {
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   color: #c62828;
@@ -32,7 +32,7 @@
   padding-bottom: 0.3rem;
 }
 
-/* 📸 CURRENT PHOTOS SECTION */
+/* CURRENT PHOTOS SECTION */
 .current-photos-section {
   display: flex;
   justify-content: center;
@@ -41,7 +41,7 @@
   padding-block: clamp(2rem, 6vw, 4rem);
 }
 
-/* 🗓️ GROUPED BY YEAR */
+/* GROUPED BY YEAR */
 .photo-years-grid {
   display: flex;
   flex-wrap: wrap;
@@ -52,7 +52,7 @@
   box-sizing: border-box;
 }
 
-/* 📦 EACH YEAR CONTAINER */
+/* EACH YEAR CONTAINER */
 .photo-years-grid > div {
   display: flex;
   flex-direction: column;
@@ -70,7 +70,7 @@
   box-shadow: 0 10px 24px rgba(255, 152, 0, 0.4);
 }
 
-/* 🖼️ PHOTO CARDS PER YEAR */
+/* PHOTO CARDS PER YEAR */
 .current-photos-list {
   display: flex;
   flex-direction: column;
@@ -80,7 +80,7 @@
   width: 100%;
 }
 
-/* 📷 INDIVIDUAL PHOTO CARD */
+/* INDIVIDUAL PHOTO CARD */
 .photo-card {
   width: clamp(180px, 25vw, 260px);
   border-radius: 14px;
@@ -94,7 +94,7 @@
   box-shadow: 0 8px 20px rgba(255, 152, 0, 0.45);
 }
 
-/* 🗂️ ARCHIVE SECTION */
+/* ARCHIVE SECTION */
 .past-photos-section {
   margin-top: clamp(2rem, 6vw, 5rem);
   width: 100%;
@@ -112,7 +112,7 @@
   text-transform: uppercase;
 }
 
-/* 📚 ARCHIVE LIST */
+/* ARCHIVE LIST */
 .past-photos-section ul {
   display: flex;
   flex-wrap: wrap;
@@ -124,7 +124,7 @@
   max-width: 900px;
 }
 
-/* 🔗 ARCHIVE LINKS */
+/* ARCHIVE LINKS */
 .past-photo-link {
   text-decoration: none;
   color: #e65100;
@@ -140,7 +140,7 @@
   border-color: orangered;
 }
 
-/* ✨ ANIMATION */
+/* ANIMATION */
 .photos-root,
 .current-photos-section,
 .past-photos-section {
