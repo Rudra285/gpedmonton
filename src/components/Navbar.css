@@ -27,14 +27,14 @@
 
 .navbar-content > div {
   display: flex;
-  align-items: center; /* ✅ perfectly centers logo + brand text vertically */
+  align-items: center; /* perfectly centers logo + brand text vertically */
   gap: 0.5rem; /* space between logo and text */
 }
 
 .brand {
   display: flex;
   align-items: center;
-  height: 50px; /* ✅ matches logo height */
+  height: 50px; /* matches logo height */
   line-height: 50px; /* centers text vertically */
   font-size: 1.5rem;
   font-weight: bold;
@@ -132,7 +132,7 @@
 
 .logo {
   width: 50px;
-  height: 50px; /* ✅ make it square to align better with text */
+  height: 50px; /* make it square to align better with text */
   object-fit: cover;
   margin-right: 1rem; /* remove extra spacing */
   border-radius: 8px;
@@ -189,7 +189,7 @@
     transition: transform 0.4s ease, opacity 0.3s ease;
     z-index: 1000; /* under navbar */
     pointer-events: none;
-    overflow-y: auto; /* ✅ allows scrolling */
+    overflow-y: auto; /* allows scrolling */
     -webkit-overflow-scrolling: touch;
   }
 
@@ -255,7 +255,7 @@
 
   .logo {
     width: 30px;
-    height: 30px; /* ✅ make it square to align better with text */
+    height: 30px; /* make it square to align better with text */
     object-fit: cover;
     margin-right: 0.4rem; /* remove extra spacing */
     border-radius: 8px;
