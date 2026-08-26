@@ -1,4 +1,4 @@
-/* 🌞 ROOT CONTAINER */
+/* ROOT CONTAINER */
 .login-root {
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 
-/* 🧱 LOGIN FORM */
+/* LOGIN FORM */
 .login-form {
   background: linear-gradient(135deg, #ff7043, #ffb300);
   color: #fff8e1;
@@ -28,7 +28,7 @@
   box-sizing: border-box;
 }
 
-/* 🏷️ HEADER */
+/* HEADER */
 .login-form h2 {
   color: #fff8e1;
   margin-bottom: clamp(1rem, 3vw, 1.5rem);
@@ -39,7 +39,7 @@
   text-align: center;
 }
 
-/* ✏️ INPUTS */
+/* INPUTS */
 .login-form input {
   width: 100%;
   padding: clamp(0.7rem, 2vw, 0.8rem) clamp(0.9rem, 2vw, 1rem);
@@ -64,7 +64,7 @@
   border-color: #fff8e1;
 }
 
-/* 🔘 BUTTON */
+/* BUTTON */
 .login-form button {
   width: 100%;
   background: linear-gradient(135deg, red, rgb(255, 119, 70));
@@ -86,7 +86,7 @@
   box-shadow: 0 6px 16px rgba(255, 179, 0, 0.4);
 }
 
-/* ⚠️ ERROR MESSAGE */
+/* ERROR MESSAGE */
 .error {
   color: #fff3e0;
   background: rgba(198, 40, 40, 0.7);
@@ -97,7 +97,7 @@
   text-align: center;
 }
 
-/* ✨ ANIMATION */
+/* ANIMATION */
 @keyframes fadeIn {
   from {
     opacity: 0;
