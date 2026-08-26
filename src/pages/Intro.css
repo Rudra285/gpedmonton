@@ -1,4 +1,4 @@
-/* 🌅 OVERVIEW */
+/* OVERVIEW */
 .overview {
   background: radial-gradient(circle at center, #FFF8E1 0%, #FFE082 50%, #FFB300 100%);
   color: orangered;
@@ -18,7 +18,7 @@
   font-size: clamp(0.9rem, 1.3vw, 1.1rem);
 }
 
-/* 🤝 SUPPORT SECTION */
+/* SUPPORT SECTION */
 .support {
   display: flex;
   flex-wrap: wrap;
@@ -62,7 +62,7 @@
   text-align: center;
 }
 
-/* 🧭 SOCIAL-MEDIA  */
+/* SOCIAL-MEDIA  */
 .social-media {
   background: linear-gradient(135deg, orange, red);
   color: #fff;
@@ -125,7 +125,7 @@
   background-color: linear-gradient(135deg, rgb(252, 178, 5), rgb(255, 123, 0));
 }
 
-/* 🪔 POOJA  */
+/* POOJA  */
 .pooja {
   background: linear-gradient(135deg, red, yellow);
   color: #FFF8E1;
@@ -166,7 +166,7 @@
   transform: translateY(-4px);
 }
 
-/* 💰 DONATION */
+/* DONATION */
 .donation {
   background: linear-gradient(135deg, red, orange);
   color:#fff;
@@ -218,7 +218,7 @@
   );
 }
 
-/* 💬 DISCLAIMER */
+/* DISCLAIMER */
 .disclaimer {
   background: linear-gradient(180deg, #4a0707, #390303);
   color: #fff8e1;
