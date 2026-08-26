@@ -25,7 +25,7 @@ const AdminLogin: React.FC = () => {
         return;
       }
 
-      // ✅ Save token in localStorage for future auth checks
+      // Save token in localStorage for future auth checks
       localStorage.setItem("adminToken", data.token);
       navigate("/admin");
     } catch (err) {
