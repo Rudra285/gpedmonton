@@ -1,4 +1,4 @@
-/* 🌅 ROOT CONTAINER */
+/* ROOT CONTAINER */
 .resources-root {
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-/* 🟠 UNIVERSAL SECTION STYLE */
+/* UNIVERSAL SECTION STYLE */
 .resource-section {
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@
   background: linear-gradient(135deg, #fff8e1, #ffecb3);
 }
 
-/* ✍️ TEXT + ICONS */
+/* TEXT + ICONS */
 .resource-section svg {
   font-size: clamp(2rem, 4vw, 3rem);
   color: #ff6f00;
@@ -56,7 +56,7 @@
   line-height: 1.6;
 }
 
-/* 🎵 MUSIC GRID */
+/* MUSIC GRID */
 .music-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(clamp(220px, 30vw, 260px), 1fr));
@@ -68,7 +68,7 @@
   box-sizing: border-box;
 }
 
-/* 🎬 VIDEO ARCHIVE LIST */
+/* VIDEO ARCHIVE LIST */
 .video-archive-list {
   list-style: none;
   padding: 0;
@@ -82,7 +82,7 @@
   box-sizing: border-box;
 }
 
-/* 🔗 VIDEO LINKS */
+/* VIDEO LINKS */
 .video-archive-link {
   display: inline-block;
   background: linear-gradient(135deg, #ffb300, #ff6f00);
@@ -101,7 +101,7 @@
   color: #fff;
 }
 
-/* ✨ SECTION ANIMATION */
+/* SECTION ANIMATION */
 .resource-section {
   opacity: 0;
   transform: translateY(20px);
